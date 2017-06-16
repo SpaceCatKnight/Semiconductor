@@ -23,31 +23,40 @@ k_B = 1.38064852*10**(-23)
 
 #print(np.exp(1.107*eV/(2*k_B*300))/10000)
 
-V = data[:,0] #mV
+V_0 = data[:,0] #V
 R = data[:,1] #Ohm
-T = data[:,2] #C
+T_C = data[:,2] #C
 t = data[:,3] #s
 
-A_B_guess = [1/10000,1.107*eV/(2*k_B)]
+V = 10**3*np.array(V_0) #mV
+T = 273.15+np.array(T_C) #K
+
+T_0 = 26
+
+A_B_guess = [10,1.107*eV/(2*k_B)]
 
 
 def func(T,A,B):
-    return A*np.exp(B/T)
+    return A*T**(-3/2)*np.exp(-B/T)
+    
+T_1 = tabelle(V,a,b)
 
-def Uth (u1, t0, t1):
-    uv = u1*t0/t1
-    return u1 - uv
+def Uth(V, T_0,a,b):
+    uv = (T_0-b)/a
+    return V + uv
 
+T_korr = tabelle(Uth(V,T_0,a,b),a,b)
 
-param = scipy.optimize.curve_fit(func,T,R,A_B_guess)[0]
+param = scipy.optimize.curve_fit(func,T,R)[0]
 
 A_new = float(param[0])
 B_new = float(param[1])
-
-t0 = 26
+print(A_new)
+print(B_new)
 
 
 plt.figure()
-plt.plot(T,R)
+plt.plot(T,R,'r')
+plt.plot(T,func(T,*A_B_guess),'g')
 plt.plot(T,func(T,A_new,B_new))
 plt.show()

@@ -11,7 +11,7 @@ def func(V,a,b):
     
 print(func(V,a_new,b_new))
 
-fit = scipy.optimize.curve_fit(func,V,T)[0]
+fit = scipy.optimize.curve_fit(func,V,T,[24,0])[0]
 
 a_new, b_new = fit
 print(a_new)
