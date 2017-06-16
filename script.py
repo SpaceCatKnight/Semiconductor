@@ -9,6 +9,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.optimize
 
+#Tabellenfunktion
+
+a = 24.3124079487
+b = 1.05876485886
+def tabelle(V,a,b):
+    return a*V + b
+    
 data = np.loadtxt('data_test.txt')
 
 eV = 1.6021766208*10**(-19)
@@ -18,10 +25,11 @@ k_B = 1.38064852*10**(-23)
 
 V = data[:,0] #mV
 R = data[:,1] #Ohm
-U1 = data[:,2] #V
+T = data[:,2] #C
 t = data[:,3] #s
 
 A_B_guess = [1/10000,1.107*eV/(2*k_B)]
+
 
 def func(T,A,B):
     return A*np.exp(B/T)
