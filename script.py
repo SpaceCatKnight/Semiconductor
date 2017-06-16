@@ -36,6 +36,8 @@ param = scipy.optimize.curve_fit(func,T,R,A_B_guess)[0]
 A_new = float(param[0])
 B_new = float(param[1])
 
+t0 = 26
+
 
 plt.figure()
 plt.plot(T,R)
