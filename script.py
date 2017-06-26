@@ -93,23 +93,37 @@ def LogRange(R,a,b,accuracy): #gibt Start- und End-Indizes eines ausgewaehlten L
 
 def linearfit(T,R,Log_R_range,guess):
     A,B = LogRange(R,*Log_R_range)
-   
+    if A > B:
+        A,B = B,A
     Tfit= T[A:B]
     Rfit= R[A:B]
     a,b = scipy.optimize.curve_fit(linearfunc,1/Tfit,np.log(Rfit),guess)[0]
 
+    plt.figure()
     plt.plot(1/T,np.log(R),'b',label='measurement')
     plt.plot(1/Tfit,np.log(Rfit),'r',label='linear range')
     plt.plot(1/T, linearfunc(1/T,a,b),'g--',label='linear fit')
     plt.xlabel(r'$1/T$ [K$^{-1}$]')
     plt.ylabel(r'ln$R$ [ln$\Omega$]')
     plt.legend(loc=2)
+    plt.show()
     print('Band gap energy in eV: ',a*2*k_B/eV)
 
-Log_R_range = [3.5,12,1e-3]
 guess = [1.107*eV/(2*k_B),1]
 
-linearfit(T_korr_cool,R_cool,Log_R_range,guess)
+print('\n','Reglertemperatur beim Aufheizen:')
+linearfit(T_heat,R_heat,[6.25,10,1e-2],guess)
+
+print('\n','korrigierte Temperatur beim Aufheizen:')
+linearfit(T_korr_heat,R_heat,[6,12,1e-2],guess)
+
+print('\n','Reglertemperatur beim Abkuehlen:')
+linearfit(T_cool,R_cool,[3.5,12,1e-3],guess)
+
+print('\n','korrigierte Temperatur beim Abkuehlen:')
+linearfit(T_korr_cool,R_cool,[3.5,12,1e-3],guess)
+
+
 
 '''
 #exponentielle Fitfunktion
