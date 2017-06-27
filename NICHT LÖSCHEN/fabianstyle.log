@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.3)  27 JUN 2017 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.3)  27 JUN 2017 17:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -619,36 +619,23 @@ File: res_temp.png Graphic file (type png)
  <use res_temp.png>
 Package pdftex.def Info: res_temp.png used on input line 65.
 (pdftex.def)             Requested size: 376.42575pt x 282.31943pt.
- [3 <./temp_time.png>] [4 <./res_temp.png>] <temp_heat.png, id=32, 578.16pt x 4
-33.62pt>
-File: temp_heat.png Graphic file (type png)
-
-<use temp_heat.png>
-Package pdftex.def Info: temp_heat.png used on input line 76.
-(pdftex.def)             Requested size: 376.42575pt x 282.31943pt.
- <temp_cool.png, id=33, 578.16pt x 433.62pt>
-File: temp_cool.png Graphic file (type png)
-
-<use temp_cool.png>
-Package pdftex.def Info: temp_cool.png used on input line 84.
-(pdftex.def)             Requested size: 376.42575pt x 282.31943pt.
- [5 <./temp_heat.png>] [6 <./temp_cool.png>]
-<spannungstabelle.png, id=42, 1080.035pt x 706.64pt>
+ [3 <./temp_time.png>] [4 <./res_temp.png>] <spannungstabelle.png, id=32, 1080.
+035pt x 706.64pt>
 File: spannungstabelle.png Graphic file (type png)
 
 <use spannungstabelle.png>
-Package pdftex.def Info: spannungstabelle.png used on input line 95.
+Package pdftex.def Info: spannungstabelle.png used on input line 76.
 (pdftex.def)             Requested size: 418.25368pt x 273.64764pt.
- [7 <./spannungstabelle.png>] (./fabianstyle.aux)
+ [5 <./spannungstabelle.png>] (./fabianstyle.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5009 strings out of 493117
- 72203 string characters out of 6135434
+ 4999 strings out of 493117
+ 72035 string characters out of 6135434
  186068 words of memory out of 5000000
- 8378 multiletter control sequences out of 15000+600000
+ 8370 multiletter control sequences out of 15000+600000
  10759 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,6n,51p,388b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -663,10 +650,10 @@ l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on fabianstyle.pdf (7 pages, 712439 bytes).
+Output written on fabianstyle.pdf (5 pages, 554642 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
