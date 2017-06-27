@@ -33,40 +33,33 @@
 \end{titlepage}
 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.3\textwidth]{uzh.png}
-\caption{Setup of the first part}
-\label{setup1}
-\end{figure}
-%
 
 \section{Physikalischer Hintergrund}
 \label{ch:Physik}
 
 Für das Experiment wird der Widerstand einer Siliziumprobe bei verschiedenen Temperaturen gemessen. Bei reinem Silizium handelt es sich um einen intrinsischen Halbleiter. Somit besteht die Ladungsträgerdichte zu gleichen Teilen aus einem Elektronenanteil $n$ und einem Lochanteil $p$.
-Die elektrische Leitfähigkeit eines Halbleiters ist gegeben durch die Formel:
+Die elektrische Leitfähigkeit eines Halbleiters ist gegeben durch die Formel
 \begin{equation}
 \label{eq:sigma}
 \sigma = ne\mu_e + pe\mu_h,
 \end{equation}
-wobei $\mu_e$ und $\mu_h$ jeweils die Mobilität der Elektronen- bzw. Loch-Beiträge ist. Diese ist leicht temperaturabhängig. Die Elektronenladungsdichte $n$ errechnet sich aus der Formel: 
+wobei $\mu_e$ und $\mu_h$ jeweils die Mobilität der Elektronen- bzw. Loch-Beiträge ist. Diese ist leicht temperaturabhängig. Die Elektronenladungsdichte $n$ errechnet sich aus der Formel
 \begin{equation}
 n = \int_{E_c}^{\infty} D_e(E) f_e(E) dE
 \end{equation}
-mit der Zustandsdichte:
+mit der Zustandsdichte
 \begin{equation}
 D_e(E) = \frac{1}{2 \pi^2} \left(\frac{2 m_e}{\hbar^2}\right)^{3/2} (E - E_c)^{1/2}
 \end{equation}
-($m_e$ ist die effektive Masse, $\hbar$ die reduzierte Planck-Konstante und $E_c$ die niedrigste Energie des Leitungsbandes) und der Fermi-Dirac-Statistik:
+($m_e$ ist die effektive Masse, $\hbar$ die reduzierte Planck-Konstante und $E_c$ die niedrigste Energie des Leitungsbandes) und der Fermi-Dirac-Statistik
 \begin{equation}
 f(E,T) = \frac{1}{\exp \left(\frac{\mu - E}{k_B T}\right) + 1}
 \end{equation}
-($\mu$ ist hier das chemische Potential) was sich mit der Näherung $mu$ - $\epsilon$ >> $k_B$ $T$ integrieren lässt zu:
+($\mu$ ist hier das chemische Potential), was sich mit der Näherung $mu - \epsilon >> k_B T$ integrieren lässt zu
 \begin{equation}
-n = 2 \left(\frac{m_e k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp \left(\frac{\mu - E_c}{k_B T}\right)
+n = 2 \left(\frac{m_e k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp \left(\frac{\mu - E_c}{k_B T}\right).
 \end{equation}
-Ganz analog errechnet sich die Lochdichte mit derselben Näherung zu:
+Ganz analog errechnet sich die Lochdichte mit derselben Näherung zu
 \begin{equation}
 p = 2 \left(\frac{m_h k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp \left(\frac{E_v - \mu}{k_B T}\right)
 \end{equation}
@@ -74,20 +67,20 @@ p = 2 \left(\frac{m_h k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp \left(\frac{E_v - 
 \begin{equation}
 np = 4 \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{3} (m_e m_h)^{3/2} \exp \left(\frac{-E_g}{k_B T}\right)
 \end{equation}
-Wobei $E_g = E_c – E_v$ die Energiebandlücke ist. Da die beiden Ladungsdichten im intrinsischen Fall gleich gross sind, lassen sie sich durch Folgende Formel in Abhängigkeit der Bandlücke und der Temperatur beschreiben:
+Dabei ist $E_g = E_c – E_v$ die Energiebandlücke. Da die beiden Ladungsdichten im intrinsischen Fall gleich gross sind, lassen sie sich durch Folgende Formel in Abhängigkeit der Bandlücke und der Temperatur beschreiben:
 \begin{equation}
 n = p = 2 \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{3/2} (m_e m_h)^{3/4} \exp \left(\frac{-E_g}{2 k_B T}\right)
 \end{equation}
-Der spezifische Widerstand ist somit nach einsetzen in Formel \ref{eq:sigma}:
+Der spezifische Widerstand ist somit nach einsetzen in Formel \ref{eq:sigma}
 \begin{equation}
 \rho = \frac{1}{\sigma} = \frac{1}{2 (\mu_e + \mu_h)e} \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{-3/2} (m_e m_h)^{-3/4} \exp \left(\frac{E_g}{2 k_B T}\right)
 \end{equation}
-Der elektrische Widerstand ist somit:
+Der elektrische Widerstand ist somit
 \begin{equation}
 \label{eq:Endloesung}
 R = A(T) T^{-3/2} \exp \left(\frac{E_g}{2 k_B T}\right)
 \end{equation}
-mit $A(T)$ als leicht temperaturabhängiger Proportionalitätsfaktor. 
+mit $A(T)$ als leicht temperaturabhängigem Proportionalitätsfaktor. 
 
 \clearpage
 
@@ -99,7 +92,7 @@ Formel \ref{eq:Endloesung} in Kapitel \ref{ch:Physik} vereinfacht sich im Temper
 \label{eq:Rexp}
 R \approx B \exp \left(\frac{E_g}{2 k_B T}\right)
 \end{equation}
-mit einer thermostatischen Proportionalitätskonstante $B$ da die Temperaturanhängigkeit der Exponentialfunktion sehr gross gegenüber dem Beitrag von $T^{-3/2}$ und den Mobilitäten $\mu_e$ und $\mu_h$ ist.
+mit einer thermostatischen Proportionalitätskonstante $B$, da die Temperaturabhängigkeit der Exponentialfunktion sehr gross gegenüber dem Beitrag von $T^{-3/2}$ und den Mobilitäten $\mu_e$ und $\mu_h$ ist.
 \\
 Der Logarithmus der Gleichung \ref{eq:Rexp} ist dann:
 \begin{equation}
@@ -107,41 +100,27 @@ Der Logarithmus der Gleichung \ref{eq:Rexp} ist dann:
 \ln(R) = \ln (B) + \frac{E_g}{2 k_B} T^{-1}
 \end{equation}
 
-Aufgrund der linearen Abhängigkeit von $T^{-1}$ ist es sinnvoll, die Messwerte in einem Plot mit $T^{-1}$ in der x-Achse und ln$(R)$ in der y-Achse darzustellen. Der dadurch entstandene Graph ist grösstenteils näherungsweise linear. Bei kleinen Temperaturen bzw grossem $T^{-1}$ scheitert die Näherung, die in Formel \ref{eq:Rexp} getroffen wurde. Die Steigung $a$ eines linearen Fits durch den näherungsweise linearen Bereich hängt aufgrund von Gleichung \ref{eq:Rlog} direkt mit der Bandlücke zusammen:
+Aufgrund der linearen Abhängigkeit von $T^{-1}$ ist es sinnvoll, die Messwerte in einem Plot mit $T^{-1}$ in der x-Achse und ln$(R)$ in der y-Achse darzustellen. Der dadurch entstandene Graph ist grösstenteils näherungsweise linear. Bei kleinen Temperaturen bzeziehungsweise grossem $T^{-1}$ scheitert die Näherung, die in Formel \ref{eq:Rexp} gemacht wurde. Die Steigung $a$ eines linearen Fits durch den näherungsweise linearen Bereich hängt aufgrund von Gleichung \ref{eq:Rlog} direkt mit der Bandlücke zusammen:
 \begin{equation}
 \label{eq:bandgap}
 a = \frac{E_g}{2 k_B} \quad \Rightarrow \quad E_g = 2 k_B a
 \end{equation}
 
-Dies führten wir einmal für die Messung während des Aufheizens der Probe und einmal für die Messung während des Abkühlens durch:
+Dies wurde einmal für die Messung während des Aufheizens der Probe und einmal für die Messung während des Abkühlens durch:
 \\
 \begin{figure}[H]
 \centering
     \subfigure{\includegraphics[width=0.45\textwidth]{temp_heat.png}}
     \subfigure{\includegraphics[width=0.45\textwidth]{temp_cool.png}}
-\caption{Linearer Fit durch den näherungsweise linearen Bereich der ln$R$($T^{-1}$)-Kurve für die Messung während dem Aufheizen links und Abkühlen rechts}
+\caption{Linearer Fit durch den näherungsweise linearen Bereich der ln$R$($T^{-1}$)-Kurve für die Messung während des Aufheizens links und Abkühlens rechts}
 \end{figure}
 
 Der rot eingefärbte Bereich der Messkurve steht für denjenigen Bereich, den wir als näherungsweise linear angenommen haben. Der lineare Fit in der Messung während des Aufheizens hat eine Steigung von $a_1$ = (5854$\pm$7)K und einen y-Achsenabschnitt von $b_1$ = -4.716$\pm$0.012. Beim Abkühlen beträgt die Steigung  $a_2$ = (6061$\pm$1)K und der y-Achsenabschnitt $b_2$ = -5.130$\pm$0.003.
 \\
-Erstere Messung führt sodann nach Formel \ref{eq:bandgap} zu einer Bandlücke von $E_{g,1}$ = (1.0089$\pm$0.0012)eV und letztere $E_{g,2}$ = (1.0446$\pm$0.0002)eV.
+Erstere Messung führt sodann nach Formel \ref{eq:bandgap} zu einer Bandlücke von $E_{g,1}$ = (1.0089$\pm$0.0012)eV und letztere zu $E_{g,2}$ = (1.0446$\pm$0.0002)eV. Hier muss berücksichtigt werden, dass die angegebene Unsicherheit direkt aus dem linearen Fit kommt und keine tiefere Bedeutung hat.
 
 
 
-
-
-\section{Fabians komische Tabelle}
-
-\begin{tabular}{lccccc}
-	\hline
-	\# & m & $t_{z}$ & $\omega_{z}$ & $t_{p}$ & $\omega_{p}$ \\
-	\hline
-	1 & 0.1\,kg & 0.707\,s & 8.89\,$s^{-1}$ & 43.3\,s & 0.145\,$s^{-1}$\\
-	2 & 0.5\,kg & 0.907\,s & 6.93\,$s^{-1}$ & 12.1\,s & 0.521\,$s^{-1}$\\
-	3 & 1.0\,kg & 0.566\,s & 11.1\,$s^{-1}$ & 7.06\,s & 0.890\,$s^{-1}$\\
-	4 & 0.1\,kg & 1.08\,s & 5.83\,$s^{-1}$ & 62.8\,s & 0.100\,$s^{-1}$\\
-	5 & 0.5\,kg & 0.523\,s & 12.0\,$s^{-1}$ & 13.8\,s & 0.457\,$s^{-1}$\\
-\end{tabular}\\
 
 
 \end{document}  
