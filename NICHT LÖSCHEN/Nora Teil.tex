@@ -41,15 +41,15 @@
 %
 
 \section{Experimenteller Aufbau}
-Die Silizium-Probe ist auf einem isolierenden Probeträger aus Keramikmaterial angebracht. An diesem zylinderförmigen Träger sind die Kontakte für die Vierpunktmessung des Widerstandes angebracht sowie ein Thermoelement welches die Temperatur der Probe messen soll. Der Träger wird von der Heizung umschlossen. Im Innenraum der Heizung herrscht ein Vakuum. Diese Vakuum unterbindet Wärmekonvektion und Oxidation. Dieser Unterdruck von $10^-5$ mBar wird mit einer Turbomolekularpumpe erzeugt. An der Heizung ist ein zweites Thermoelement für den Temperaturregler angebracht. Dieser Regler steuert die Heizleistung, seine Funktionsweise wird in \ref{PID_Regler}  genauer beschrieben. Die Messdaten und die Daten des Reglers können mit einem LabVIEW Programm überprüft und gespeichert werden.
+Die Silizium-Probe ist auf einem isolierenden Probeträger aus Keramikmaterial angebracht. An diesem zylinderförmigen Träger sind die Kontakte für die Vierpunktmessung des Widerstandes angebracht, sowie ein Thermoelement, welches die Temperatur der Probe messen soll. Der Träger wird von der Heizung umschlossen. Im Innenraum der Heizung herrscht ein Vakuum um die Wärmekonvektion und Oxidation zu unterbinden. Dieser Unterdruck von $10^-5$ mBar wird mit einer Turbomolekularpumpe erzeugt. An der Heizung ist ein zweites Thermoelement für den Temperaturregler angebracht. Dieser Regler steuert die Heizleistung, seine Funktionsweise wird in \ref{PID_Regler}  genauer beschrieben. Die Messdaten und die Daten des Reglers können mit einem LabVIEW Programm überprüft und gespeichert werden.
 
 
 \section{PID-Regler}
 \label{PID_Regler}
 Der Temperaturregler ist ein PID-Regler (Proportional Integral Differential Regler). Dieser Regler basiert auf Rückkopplung. Es wird ein IST-Wert, in unserem Fall die aktuelle Temperatur der Heizspirale und ein SOLL-Wert, die gewünschte Temperatur, verglichen. Der PID-Regler steuert den Heizstrom als Funktion der Differenz zwischen IST- und SOLL-Wert. Er wird eingesetzt um potentielle Störungen zu glätten und eine stabile Temperaturregelung zu erhalten. Die drei Teile des PID-Reglers haben verschiedene Funktionen.
 
-Proportional-Teil reagiert sehr schnell auf Temperaturänderung da er proportional zur Differenz des IST- und SOLL-Wertes ist. Mit einem Proportional-Teil alleine wird die gewünschte Temperatur aber nie erreicht.
-Der Integral-Teil reagiert als Funktion der Differenz des Mittelwerts und des SOLL-Wertes. Dieser Teil reguliert also langsamer als der Proportional-Teil. Störungen werden ausgeglichen und der SOLL-Wert wird tatsächlich erreicht.
+Proportional-Teil reagiert sehr schnell auf Temperaturänderung da er proportional zur Differenz des IST- und SOLL-Wertes ist. Mit einem Proportional-Teil alleine wird die gewünschte Temperatur aber nie erreicht.\\
+Der Integral-Teil reagiert als Funktion der Differenz des Mittelwerts und des SOLL-Wertes. Dieser Teil reguliert also langsamer als der Proportional-Teil. Störungen werden ausgeglichen und der SOLL-Wert wird tatsächlich erreicht.\\
 Der DIfferentialt-Teil extrapoliert den Temperaturverlauf und reagiert als Funktion der Differenz Zwischen dem extrapolierten IST-Wert und dem SOLL-Wert. Dieser Teil reguliert schneller als der Proportional-Teil und ist somit sehr instabil gegenüber Störungen, eine Übersteuerung ist möglich.
 In unserem Versuch bleibt der Differential-Teil darum ausgeschaltet. 
 
