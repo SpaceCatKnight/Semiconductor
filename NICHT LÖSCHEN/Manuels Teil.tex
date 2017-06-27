@@ -41,6 +41,7 @@
 %
 
 \section{Physikalischer Hintergrund}
+\label{ch:Physik}
 
 Für das Experiment wird der Widerstand einer Siliziumprobe bei verschiedenen Temperaturen gemessen. Bei reinem Silizium handelt es sich um einen intrinsischen Halbleiter. Somit besteht die Ladungsträgerdichte zu gleichen Teilen aus einem Elektronenanteil $n$ und einem Lochanteil $p$.
 Die elektrische Leitfähigkeit eines Halbleiters ist gegeben durch die Formel:
@@ -48,8 +49,7 @@ Die elektrische Leitfähigkeit eines Halbleiters ist gegeben durch die Formel:
 \label{eq:sigma}
 \sigma = ne\mu_e + pe\mu_h,
 \end{equation}
-wobei $\mu_e$ und $\mu_h$ jeweils die Mobilität der Elektronen- bzw. Loch-Beiträge ist. Diese ist leicht temperaturabhängig, wobei diese vernachlässigbar klein gegenüber der Temperaturabhängigkeit der Ladungsträgerdichten $n$ und $p$ ist.
-Die Elektronenladungsdichte $n$ errechnet sich aus der Formel: 
+wobei $\mu_e$ und $\mu_h$ jeweils die Mobilität der Elektronen- bzw. Loch-Beiträge ist. Diese ist leicht temperaturabhängig. Die Elektronenladungsdichte $n$ errechnet sich aus der Formel: 
 \begin{equation}
 n = \int_{E_c}^{\infty} D_e(E) f_e(E) dE
 \end{equation}
@@ -73,19 +73,55 @@ p = 2 \left(\frac{m_h k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp \left(\frac{E_v - 
 \begin{equation}
 np = 4 \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{3} (m_e m_h)^{3/2} \exp \left(\frac{-E_g}{k_B T}\right)
 \end{equation}
-Wobei $E_g = E_C – E_V$ die Energiebandlücke ist. Da die beiden Ladungsdichten im intrinsischen Fall gleich gross sind, lassen sie sich durch Folgende Formel in Abhängigkeit der Bandlücke und der Temperatur beschreiben:
+Wobei $E_g = E_c – E_v$ die Energiebandlücke ist. Da die beiden Ladungsdichten im intrinsischen Fall gleich gross sind, lassen sie sich durch Folgende Formel in Abhängigkeit der Bandlücke und der Temperatur beschreiben:
 \begin{equation}
 n = p = 2 \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{3/2} (m_e m_h)^{3/4} \exp \left(\frac{-E_g}{2 k_B T}\right)
 \end{equation}
 Der spezifische Widerstand ist somit nach einsetzen in Formel \ref{eq:sigma}:
 \begin{equation}
-\rho = \frac{1}{\sigma} = \frac{1}{4e} \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{-3/2} (m_e m_h)^{-3/4} \exp \left(\frac{E_g}{2 k_B T}\right)
+\rho = \frac{1}{\sigma} = \frac{1}{2 (\mu_e + \mu_h)e} \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{-3/2} (m_e m_h)^{-3/4} \exp \left(\frac{E_g}{2 k_B T}\right)
 \end{equation}
 Der elektrische Widerstand ist somit:
 \begin{equation}
-R = A T^{-3/2} \exp \left(\frac{E_g}{2 k_B T}\right)
+\label{eq:Endloesung}
+R = A(T) T^{-3/2} \exp \left(\frac{E_g}{2 k_B T}\right)
 \end{equation}
-mit $A$ als Proportionalitätsfaktor. 
+mit $A(T)$ als leicht temperaturabhängiger Proportionalitätsfaktor. 
+
+\clearpage
+
+
+\section{Auswertung}
+
+Formel \ref{eq:Endloesung} in Kapitel \ref{ch:Physik} vereinfacht sich im Temperaturbereich des Experiments näherungsweise zu:
+\begin{equation}
+\label{eq:Rexp}
+R \approx B \exp \left(\frac{E_g}{2 k_B T}\right)
+\end{equation}
+mit einer thermostatischen Proportionalitätskonstante $B$ da die Temperaturanhängigkeit der Exponentialfunktion sehr gross gegenüber dem Beitrag von $T^{-3/2}$ und den Mobilitäten $\mu_e$ und $\mu_h$ ist.
+\\
+Der Logarithmus der Gleichung \ref{eq:Rexp} ist dann:
+\begin{equation}
+\label{eq:Rlog}
+\ln(R) = \ln (B) + \frac{E_g}{2 k_B} T^{-1}
+\end{equation}
+
+Aufgrund der linearen Abhängigkeit von $T^{-1}$ ist es sinnvoll, die Messwerte in einem Plot mit $T^{-1}$ in der x-Achse und ln$(R)$ in der y-Achse darzustellen. Der dadurch entstandene Graph ist grösstenteils näherungsweise linear. Bei kleinen Temperaturen bzw grossem $T^{-1}$ scheitert die Näherung, die in Formel \ref{eq:Rexp} getroffen wurde. Die Steigung $a$ eines linearen Fits durch den näherungsweise linearen Bereich hängt aufgrund von Gleichung \ref{eq:Rlog} direkt mit der Bandlücke zusammen:
+\begin{equation}
+\label{eq:bandgap}
+a = \frac{E_g}{2 k_B} \quad \Rightarrow \quad E_g = 2 k_B a
+\end{equation}
+
+Dies führten wir einmal für die Messung während des Aufheizens der Probe und einmal für die Messung während des Abkühlens durch:
+\\
+PLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTS
+\\
+Der rot eingefärbte Bereich der Messkurve steht für denjenigen Bereich, den wir als näherungsweise linear angenommen haben. Der lineare Fit in der Messung während des Aufheizens hat eine Steigung von $a_1$ = WERTWERTWERT und einen y-Achsenabschnitt von $b_1$ = WERTWERTWERT. Beim Abkühlen beträgt die Steigung  $a_2$ = WERTWERTWERT und der y-Achsenabschnitt $b_2$ = WERTWERTWERT.
+\\
+Erstere Messung führt sodann nach Formel \ref{eq:bandgap} zu einer Bandlücke von $E_{g,1}$ = WERTWERTWERT und letztere $E_{g,2}$ = WERTWERTWERT.
+
+
+
 
 
 \section{Fabians komische Tabelle}
