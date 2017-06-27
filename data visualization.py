@@ -48,7 +48,7 @@ for i in range(len(T)):
         t_heat = t[:i]
         t_cool = t[i:]
 
-
+'''
 plt.subplot(221)
 plt.plot(T_heat,R_heat,'r')
 
@@ -61,3 +61,10 @@ plt.plot(T_cool,R_cool,'g')
 plt.subplot(224)
 plt.plot(V_cool,R_cool,'y')
 
+plt.figure()
+plt.plot(t,T,'r')
+plt.figure()
+plt.plot(t,V,'g')
+'''
+plt.figure()
+plt.plot(V,R)
