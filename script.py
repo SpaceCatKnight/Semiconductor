@@ -63,10 +63,10 @@ T_korr = 273.15+np.array(T_korr)
 
 
 #Cool- und Heat-Teil voneinander trennen
-Tmax = np.max(T)
-for i in range(len(T)):
-    if T[i] == Tmax:
-#        print('Tmax at t = ', t[i])
+Vmax = np.max(V)
+for i in range(len(V)):
+    if V[i] == Vmax:
+#        print('Vmax at t = ', t[i])
         T_korr_heat = T_korr[:i]
         T_korr_cool = T_korr[i:]
         R_heat = R[:i]
@@ -98,7 +98,8 @@ def linearfit(T,R,Log_R_range,guess):
     Tfit= T[A:B]
     Rfit= R[A:B]
     a,b = scipy.optimize.curve_fit(linearfunc,1/Tfit,np.log(Rfit),guess)[0]
-
+    sigma = np.sqrt(np.diag(scipy.optimize.curve_fit(linearfunc,1/Tfit,np.log(Rfit),guess)[1]))
+    
     plt.figure()
     plt.plot(1/T,np.log(R),'b',label='measurement')
     plt.plot(1/Tfit,np.log(Rfit),'r',label='linear range')
@@ -108,6 +109,7 @@ def linearfit(T,R,Log_R_range,guess):
     plt.legend(loc=2)
     plt.show()
     print('Band gap energy in eV: ',a*2*k_B/eV)
+    print('Sigma: ',sigma*2*k_B/eV)
 
 guess = [1.107*eV/(2*k_B),1]
 
@@ -115,13 +117,13 @@ print('\n','Reglertemperatur beim Aufheizen:')
 linearfit(T_heat,R_heat,[6.25,10,1e-2],guess)
 
 print('\n','korrigierte Temperatur beim Aufheizen:')
-linearfit(T_korr_heat,R_heat,[6,12,1e-2],guess)
+linearfit(T_korr_heat,R_heat,[3.09,11.9,1e-1],guess)
 
 print('\n','Reglertemperatur beim Abkuehlen:')
 linearfit(T_cool,R_cool,[3.5,12,1e-3],guess)
 
 print('\n','korrigierte Temperatur beim Abkuehlen:')
-linearfit(T_korr_cool,R_cool,[3.5,12,1e-3],guess)
+linearfit(T_korr_cool,R_cool,[3.22,12,1e-3],guess)
 
 
 
