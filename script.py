@@ -107,23 +107,51 @@ def linearfit(T,R,Log_R_range,guess):
     plt.xlabel(r'$1/T$ [K$^{-1}$]')
     plt.ylabel(r'ln$R$ [ln$\Omega$]')
     plt.legend(loc=2)
-    plt.show()
     print('Band gap energy in eV: ',a*2*k_B/eV)
     print('Sigma: ',sigma*2*k_B/eV)
 
 guess = [1.107*eV/(2*k_B),1]
 
+
+#Plot R/T
+
 print('\n','Reglertemperatur beim Aufheizen:')
 linearfit(T_heat,R_heat,[6.25,10,1e-2],guess)
+#plt.savefig('reglertemp_heat.png')
 
 print('\n','korrigierte Temperatur beim Aufheizen:')
 linearfit(T_korr_heat,R_heat,[3.09,11.9,1e-1],guess)
+plt.savefig('probentemp_heat.png')
 
 print('\n','Reglertemperatur beim Abkuehlen:')
 linearfit(T_cool,R_cool,[3.5,12,1e-3],guess)
+#plt.savefig('reglertemp_heat.png')
 
 print('\n','korrigierte Temperatur beim Abkuehlen:')
 linearfit(T_korr_cool,R_cool,[3.22,12,1e-3],guess)
+plt.savefig('probentemp_cool.png')
+
+
+#Plot T/t
+
+plt.figure()
+plt.plot(t[:5000],T[:5000],label='Reglertemperatur')
+plt.plot(t[:5000],T_korr[:5000],label='Probentemperatur')
+plt.xlabel('$t$ [s]')
+plt.ylabel('$T$ [K]')
+plt.legend(loc=4)
+plt.savefig('temp_time.png')
+
+
+#Plot R/T
+plt.figure()
+plt.plot(T_korr_heat,R_heat,label='Aufwaermprozess')
+plt.plot(T_korr_cool,R_cool,label='Abkuehlprozess')
+plt.xlabel('$T$ [K]')
+plt.ylabel('$R$ [$\Omega$]')
+plt.legend(loc=1)
+plt.xlim(300,450)
+plt.savefig('res_temp.png')
 
 
 
