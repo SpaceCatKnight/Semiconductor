@@ -114,7 +114,7 @@ guess = [1.107*eV/(2*k_B),1]
 
 
 #Plot R/T
-"""
+
 print('\n','Reglertemperatur beim Aufheizen:')
 linearfit(T_heat,R_heat,[6.25,10,1e-2],guess)
 #plt.savefig('reglertemp_heat.png',dpi=250)
@@ -122,7 +122,7 @@ linearfit(T_heat,R_heat,[6.25,10,1e-2],guess)
 
 print('\n','korrigierte Temperatur beim Aufheizen:')
 linearfit(T_korr_heat,R_heat,[3.09,11.9,1e-1],guess)
-plt.savefig('probentemp_heat.png',dpi=250)
+plt.savefig('temp_heat.png',dpi=250)
 #plt.show()
 
 print('\n','Reglertemperatur beim Abkuehlen:')
@@ -132,9 +132,9 @@ linearfit(T_cool,R_cool,[3.5,12,1e-3],guess)
 
 print('\n','korrigierte Temperatur beim Abkuehlen:')
 linearfit(T_korr_cool,R_cool,[3.22,12,1e-3],guess)
-plt.savefig('probentemp_cool.png',dpi=250)
+plt.savefig('temp_cool.png',dpi=250)
 #plt.show()
-"""
+
 
 #Plot T/t
 """
@@ -148,16 +148,16 @@ plt.savefig('temp_time.png',dpi=250)
 """
 
 #Plot R/T
-"""
+
 plt.figure()
-plt.plot(T_korr_heat,R_heat,label='Aufwaermprozess')
-plt.plot(T_korr_cool,R_cool,label='Abkuehlprozess')
+plt.plot(T_korr_heat,R_heat/1000,label='Aufwaermprozess')
+plt.plot(T_korr_cool,R_cool/1000,label='Abkuehlprozess')
 plt.xlabel('$T$ [K]')
-plt.ylabel('$R$ [$\Omega$]')
+plt.ylabel('$R$ [$k\Omega$]')
 plt.legend(loc=1)
 plt.xlim(300,450)
 plt.savefig('res_temp.png',dpi=250)
-"""
+
 
 
 '''
