@@ -76,7 +76,7 @@ for i in range(len(V)):
         t_heat = t[:i]
         t_cool = t[i:]
 
-
+        
 #lineare Fitfunktion
 def linearfunc(x,a,b):
     return a*x + b
@@ -101,14 +101,15 @@ def linearfit(T,R,Log_R_range,guess):
     sigma = np.sqrt(np.diag(scipy.optimize.curve_fit(linearfunc,1/Tfit,np.log(Rfit),guess)[1]))
     
     plt.figure()
-    plt.plot(1/T,np.log(R),'b',label='measurement')
-    plt.plot(1/Tfit,np.log(Rfit),'r',label='linear range')
-    plt.plot(1/T, linearfunc(1/T,a,b),'g--',label='linear fit')
-    plt.xlabel(r'$1/T$ [K$^{-1}$]')
-    plt.ylabel(r'ln$R$ [ln$\Omega$]')
+    plt.semilogy(1/T*1000,R,'b',label='measurement')
+    plt.semilogy(1/Tfit*1000,Rfit,'r',label='linear range')
+    plt.semilogy(1/T*1000, np.exp(linearfunc(1/T,a,b)),'g--',label='linear fit')
+    plt.xlabel(r'$1/T$ [K$^{-1} \cdot 10^3$]')
+    plt.ylabel(r'ln$R$ [$\Omega$]')
     plt.legend(loc=2)
     print('Band gap energy in eV: ',a*2*k_B/eV)
     print('Sigma: ',sigma*2*k_B/eV)
+    
 
 guess = [1.107*eV/(2*k_B),1]
 
@@ -122,7 +123,7 @@ linearfit(T_heat,R_heat,[6.25,10,1e-2],guess)
 
 print('\n','korrigierte Temperatur beim Aufheizen:')
 linearfit(T_korr_heat,R_heat,[3.09,11.9,1e-1],guess)
-plt.savefig('temp_heat.png',dpi=250)
+#plt.savefig('temp_heat.png',dpi=250)
 #plt.show()
 
 print('\n','Reglertemperatur beim Abkuehlen:')
@@ -132,8 +133,10 @@ linearfit(T_cool,R_cool,[3.5,12,1e-3],guess)
 
 print('\n','korrigierte Temperatur beim Abkuehlen:')
 linearfit(T_korr_cool,R_cool,[3.22,12,1e-3],guess)
-plt.savefig('temp_cool.png',dpi=250)
+#plt.savefig('temp_cool.png',dpi=250)
 #plt.show()
+
+
 
 
 #Plot T/t
@@ -148,7 +151,7 @@ plt.savefig('temp_time.png',dpi=250)
 """
 
 #Plot R/T
-
+"""
 plt.figure()
 plt.plot(T_korr_heat,R_heat/1000,label='Aufwaermprozess')
 plt.plot(T_korr_cool,R_cool/1000,label='Abkuehlprozess')
@@ -157,7 +160,7 @@ plt.ylabel('$R$ [$k\Omega$]')
 plt.legend(loc=1)
 plt.xlim(300,450)
 plt.savefig('res_temp.png',dpi=250)
-
+"""
 
 
 '''
