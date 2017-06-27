@@ -29,7 +29,7 @@ k_B = 1.38064852*10**(-23)
 
 
 #Daten auslesen
-data = np.loadtxt(fname='Full R data.txt', skiprows=7)
+#data = np.loadtxt(fname='Full R data.txt', skiprows=7)
 
 V_0 = data[:,0] #V
 R = data[:,1] #Ohm
@@ -91,7 +91,7 @@ def LogRange(R,a,b,accuracy): #gibt Start- und End-Indizes eines ausgewaehlten L
             B = i
     return A,B
 
-def linearfit(T,R,Log_R_range,guess):
+def linearfit(T,R,Log_R_range,guess,title):
     A,B = LogRange(R,*Log_R_range)
     if A > B:
         A,B = B,A
@@ -101,14 +101,17 @@ def linearfit(T,R,Log_R_range,guess):
     sigma = np.sqrt(np.diag(scipy.optimize.curve_fit(linearfunc,1/Tfit,np.log(Rfit),guess)[1]))
     
     plt.figure()
-    plt.semilogy(1/T*1000,R,'b',label='measurement')
-    plt.semilogy(1/Tfit*1000,Rfit,'r',label='linear range')
-    plt.semilogy(1/T*1000, np.exp(linearfunc(1/T,a,b)),'g--',label='linear fit')
-    plt.xlabel(r'$1/T$ [K$^{-1} \cdot 10^3$]')
-    plt.ylabel(r'ln$R$ [$\Omega$]')
+    plt.semilogy(1/T*1000,R,'b',label='Messung')
+    plt.semilogy(1/Tfit*1000,Rfit,'r',label='linearer Bereich')
+    plt.semilogy(1/T*1000, np.exp(linearfunc(1/T,a,b)),'g--',label='linearer Fit')
+    plt.xlabel(r'$T^{-1}$ [$10^{-3} \cdot $K$^{-1}$]')
+    plt.ylabel(r'$R$ [$\Omega$]')
+    plt.title(title)
     plt.legend(loc=2)
+    print('a: ',a,'\n b: ',b)
+    print('Sigma von a und b: ',sigma)
     print('Band gap energy in eV: ',a*2*k_B/eV)
-    print('Sigma: ',sigma*2*k_B/eV)
+    print('Sigma von E_g: ',sigma[0]*2*k_B/eV)
     
 
 guess = [1.107*eV/(2*k_B),1]
@@ -116,24 +119,24 @@ guess = [1.107*eV/(2*k_B),1]
 
 #Plot R/T
 
-print('\n','Reglertemperatur beim Aufheizen:')
-linearfit(T_heat,R_heat,[6.25,10,1e-2],guess)
+#print('\n','Reglertemperatur beim Aufheizen:')
+#linearfit(T_heat,R_heat,[6.25,10,1e-2],guess,'Aufheizen')
 #plt.savefig('reglertemp_heat.png',dpi=250)
 #plt.show()
 
 print('\n','korrigierte Temperatur beim Aufheizen:')
-linearfit(T_korr_heat,R_heat,[3.09,11.9,1e-1],guess)
-#plt.savefig('temp_heat.png',dpi=250)
+linearfit(T_korr_heat,R_heat,[3.09,11.9,1e-1],guess,'Aufheizen')
+plt.savefig('temp_heat.png',dpi=250)
 #plt.show()
 
-print('\n','Reglertemperatur beim Abkuehlen:')
-linearfit(T_cool,R_cool,[3.5,12,1e-3],guess)
+#print('\n','Reglertemperatur beim Abkuehlen:')
+#linearfit(T_cool,R_cool,[3.5,12,1e-3],guess,'Abkühlen')
 #plt.savefig('reglertemp_heat.png',dpi=250)
 #plt.show()
 
 print('\n','korrigierte Temperatur beim Abkuehlen:')
-linearfit(T_korr_cool,R_cool,[3.22,12,1e-3],guess)
-#plt.savefig('temp_cool.png',dpi=250)
+linearfit(T_korr_cool,R_cool,[3.22,12,1e-3],guess,'Abkühlen')
+plt.savefig('temp_cool.png',dpi=250)
 #plt.show()
 
 
