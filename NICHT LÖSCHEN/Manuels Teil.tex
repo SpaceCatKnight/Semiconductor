@@ -6,6 +6,7 @@
 \usepackage{amsmath}										
 \usepackage{amssymb}
 \usepackage{subfigure}
+\usepackage{here}
 \setkomafont{sectioning}{\bfseries}	
 
 \title{Widerstandsmessung am Halbleiter}
@@ -114,11 +115,16 @@ a = \frac{E_g}{2 k_B} \quad \Rightarrow \quad E_g = 2 k_B a
 
 Dies führten wir einmal für die Messung während des Aufheizens der Probe und einmal für die Messung während des Abkühlens durch:
 \\
-PLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTSPLOTS
+\begin{figure}[H]
+\centering
+    \subfigure{\includegraphics[width=0.45\textwidth]{temp_heat.png}}
+    \subfigure{\includegraphics[width=0.45\textwidth]{temp_cool.png}}
+\caption{Linearer Fit durch den näherungsweise linearen Bereich der ln$R$($T^{-1}$)-Kurve für die Messung während dem Aufheizen links und Abkühlen rechts}
+\end{figure}
+
+Der rot eingefärbte Bereich der Messkurve steht für denjenigen Bereich, den wir als näherungsweise linear angenommen haben. Der lineare Fit in der Messung während des Aufheizens hat eine Steigung von $a_1$ = (5854$\pm$7)K und einen y-Achsenabschnitt von $b_1$ = -4.716$\pm$0.012. Beim Abkühlen beträgt die Steigung  $a_2$ = (6061$\pm$1)K und der y-Achsenabschnitt $b_2$ = -5.130$\pm$0.003.
 \\
-Der rot eingefärbte Bereich der Messkurve steht für denjenigen Bereich, den wir als näherungsweise linear angenommen haben. Der lineare Fit in der Messung während des Aufheizens hat eine Steigung von $a_1$ = WERTWERTWERT und einen y-Achsenabschnitt von $b_1$ = WERTWERTWERT. Beim Abkühlen beträgt die Steigung  $a_2$ = WERTWERTWERT und der y-Achsenabschnitt $b_2$ = WERTWERTWERT.
-\\
-Erstere Messung führt sodann nach Formel \ref{eq:bandgap} zu einer Bandlücke von $E_{g,1}$ = WERTWERTWERT und letztere $E_{g,2}$ = WERTWERTWERT.
+Erstere Messung führt sodann nach Formel \ref{eq:bandgap} zu einer Bandlücke von $E_{g,1}$ = (1.0089$\pm$0.0012)eV und letztere $E_{g,2}$ = (1.0446$\pm$0.0002)eV.
 
 
 
