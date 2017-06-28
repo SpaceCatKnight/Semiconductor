@@ -61,15 +61,6 @@
 
 \usepackage{hyperref}
 
-\newcommand{\footnoteremember}[2]{
-  \footnote{#2}
-  \newcounter{#1}
-  \setcounter{#1}{\value{footnote}}
-}
-\newcommand{\footnoterecall}[1]{%
-  \footnotemark[\value{#1}]
-}
-
 \begin{document}
 \selectlanguage{ngerman}
 \begin{titlepage}
@@ -136,32 +127,28 @@
 \label{ch:Physik}
 
 Für das Experiment wird der Widerstand einer Siliziumprobe bei verschiedenen Temperaturen gemessen. Bei reinem Silizium handelt es sich um einen intrinsischen Halbleiter. Somit besteht die Ladungsträgerdichte zu gleichen Teilen aus einem Elektronenanteil $n$ und einem Lochanteil $p$.
-Die elektrische Leitfähigkeit eines Halbleiters ist gegeben durch die Formel\footnoteremember{kittel}{Introduction to solid state physics / Charles Kittel.—8th ed.}
+Die elektrische Leitfähigkeit eines Halbleiters ist gegeben durch die Formel
 \begin{equation}
 \label{eq:sigma}
-\sigma = ne\mu_e + pe\mu_h ,
+\sigma = ne\mu_e + pe\mu_h,
 \end{equation}
-wobei $\mu_e$ und $\mu_h$ jeweils die Mobilität der Elektronen- bzw. Loch-Beiträge ist. Diese ist leicht temperaturabhängig. Die Elektronenladungsdichte $n$ errechnet sich aus der Formel\footnoterecall{kittel}
+wobei $\mu_e$ und $\mu_h$ jeweils die Mobilität der Elektronen- bzw. Loch-Beiträge ist. Diese ist leicht temperaturabhängig. Die Elektronenladungsdichte $n$ errechnet sich aus der Formel
 \begin{equation}
-n = \int_{E_c}^{\infty} D_e(E) f_e(E) dE 
+n = \int_{E_c}^{\infty} D_e(E) f_e(E) dE
 \end{equation}
-mit der Zustandsdichte\footnoterecall{kittel}
+mit der Zustandsdichte
 \begin{equation}
 D_e(E) = \frac{1}{2 \pi^2} \left(\frac{2 m_e}{\hbar^2}\right)^{3/2} (E - E_c)^{1/2}
 \end{equation}
-($m_e$ ist die effektive Masse, $\hbar$ die reduzierte Planck-Konstante und $E_c$ die niedrigste Energie des Leitungsbandes) und der Fermi-Dirac-Statistik\footnoterecall{kittel}
+($m_e$ ist die effektive Masse, $\hbar$ die reduzierte Planck-Konstante und $E_c$ die niedrigste Energie des Leitungsbandes) und der Fermi-Dirac-Statistik
 \begin{equation}
 f(E,T) = \frac{1}{\exp \left(\frac{\mu - E}{k_B T}\right) + 1}
 \end{equation}
-<<<<<<< HEAD
 ($\mu$ ist hier das chemische Potential), was sich mit der Näherung $\mu - E >> k_B T$ integrieren lässt zu
-=======
-($\mu$ ist hier das chemische Potential), was sich mit der Näherung $mu - \epsilon >> k_B T$ integrieren lässt zu\footnoterecall{kittel}
->>>>>>> 952ef8665e7325e6e609a5ecd72bd96c6ee13a1f
 \begin{equation}
 n = 2 \left(\frac{m_e k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp \left(\frac{\mu - E_c}{k_B T}\right).
 \end{equation}
-Ganz analog errechnet sich die Lochdichte mit derselben Näherung zu\footnoterecall{kittel}
+Ganz analog errechnet sich die Lochdichte mit derselben Näherung zu
 \begin{equation}
 p = 2 \left(\frac{m_h k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp \left(\frac{E_v - \mu}{k_B T}\right)
 \end{equation}
@@ -177,7 +164,7 @@ Der spezifische Widerstand ist somit nach einsetzen in Formel \ref{eq:sigma}
 \begin{equation}
 \rho = \frac{1}{\sigma} = \frac{1}{2 (\mu_e + \mu_h)e} \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{-3/2} (m_e m_h)^{-3/4} \exp \left(\frac{E_g}{2 k_B T}\right)
 \end{equation}
-Da der elektrische Widerstand mit einem geometrischen Faktor direkt proportional zum spezifischen Widerstand ist, wird dieser somit
+Der elektrische Widerstand ist somit
 \begin{equation}
 \label{eq:Endloesung}
 R = A(T) T^{-3/2} \exp \left(\frac{E_g}{2 k_B T}\right)
