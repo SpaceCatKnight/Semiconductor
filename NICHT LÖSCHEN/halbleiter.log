@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.28)  28 JUN 2017 11:16
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.28)  28 JUN 2017 11:13
->>>>>>> a46d9f916ec11476c5fec378e33ebb3b3ddf80d1
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.28)  28 JUN 2017 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -535,8 +531,8 @@ Package: marginnote 2012/03/29 v1.1i non floating margin notes for LaTeX
 (/usr/local/texlive/2015/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/helvet.sty
-Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
@@ -566,7 +562,7 @@ Class scrreprt Warning: Usage of package `titlesec' together
 (scrreprt)              the extended optional argument of the section
 (scrreprt)              commands.
 (scrreprt)              Nevertheless, using requested
-(scrreprt)              package `titlesec' on input line 21.
+(scrreprt)              package `titlesec' on input line 22.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
@@ -603,7 +599,7 @@ Package titlesec Warning: Non standard sectioning command detected
 )
 
 Package scrreprt Warning: Activating an ugly workaround for a missing
-(scrreprt)                feature of package `titlesec` on input line 21.
+(scrreprt)                feature of package `titlesec` on input line 22.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -980,21 +976,21 @@ File: german.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 (./halbleiter.aux)
 \openout1 = `halbleiter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 65.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -1076,10 +1072,10 @@ Package biblatex Warning: Data encoding is 'utf8'.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'halbleiter.bbl' not found.
 No file halbleiter.bbl.
-Package biblatex Info: Reference section=0 on input line 64.
-Package biblatex Info: Reference segment=0 on input line 64.
+Package biblatex Info: Reference section=0 on input line 65.
+Package biblatex Info: Reference segment=0 on input line 65.
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 64.
+Package hyperref Info: Link coloring OFF on input line 65.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1088,9 +1084,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count303
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 65.
+LaTeX Info: Redefining \pageref on input line 65.
+LaTeX Info: Redefining \nameref on input line 65.
 
 (./halbleiter.out) (./halbleiter.out)
 \@outlinefile=\write4
@@ -1100,57 +1096,57 @@ LaTeX Info: Redefining \nameref on input line 64.
 <uzh.png, id=48, 147.6717pt x 54.08205pt>
 File: uzh.png Graphic file (type png)
  <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 69.
+Package pdftex.def Info: uzh.png used on input line 70.
 (pdftex.def)             Requested size: 5.90585pt x 2.1629pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 73.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 73.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 74.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 76.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 77.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--87
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--87
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--87
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--87
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--87
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 [1
 
 
@@ -1158,32 +1154,32 @@ Package babel Info: Redefining ngerman shorthand "~
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./uzh.p
 ng>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 124.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 125.
  (./halbleiter.toc)
 \tf@toc=\write5
 \openout5 = `halbleiter.toc'.
 
 File: uzh.png Graphic file (type png)
  <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 126.
+Package pdftex.def Info: uzh.png used on input line 127.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 127.
  [2
 
 
 ]
 Kapitel 1.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 127.
 
 Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              Implementation of \float@addtolist became
@@ -1200,163 +1196,163 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              deprecated \float@addtolist interface .
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 159.
+LaTeX Warning: Command \textendash invalid in math mode on input line 160.
 
 File: uzh.png Graphic file (type png)
 <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 166.
+Package pdftex.def Info: uzh.png used on input line 167.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 167.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 167.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 167.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 167.
  [3
 
 ]
 File: uzh.png Graphic file (type png)
  <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 174.
+Package pdftex.def Info: uzh.png used on input line 175.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 175.
  [4]
 Kapitel 2.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 175.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 179.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 179.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 189.
+(babel)             in language  on input line 190.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 189.
+(babel)             in language  on input line 190.
 File: uzh.png Graphic file (type png)
 <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 191.
+Package pdftex.def Info: uzh.png used on input line 192.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 191.
+(babel)             in language  on input line 192.
  [5
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 195.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 195.
 
-Overfull \hbox (0.1199pt too wide) in paragraph at lines 195--196
+Overfull \hbox (0.1199pt too wide) in paragraph at lines 196--197
 []\T1/phv/m/n/10.95 Um den Wi-der-stand der Pro-be mög-lichst ge-nau zu mes-sen
 , wird die Vierpunkt-Methode
  []
 
 File: uzh.png Graphic file (type png)
 <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 198.
+Package pdftex.def Info: uzh.png used on input line 199.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 199.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 199.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 199.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 199.
  [6]
 Kapitel 3.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 203.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 203.
 <temp_time.png, id=113, 578.16pt x 433.62pt>
 File: temp_time.png Graphic file (type png)
  <use temp_time.png>
-Package pdftex.def Info: temp_time.png used on input line 207.
+Package pdftex.def Info: temp_time.png used on input line 208.
 (pdftex.def)             Requested size: 376.42575pt x 282.31943pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 214.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 214.
 
 <res_temp.png, id=116, 578.16pt x 433.62pt>
 File: res_temp.png Graphic file (type png)
  <use res_temp.png>
-Package pdftex.def Info: res_temp.png used on input line 218.
+Package pdftex.def Info: res_temp.png used on input line 219.
 (pdftex.def)             Requested size: 376.42575pt x 282.31943pt.
 File: uzh.png Graphic file (type png)
  <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 225.
+Package pdftex.def Info: uzh.png used on input line 226.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
 
 [7
 
  <./temp_time.png>]
 File: uzh.png Graphic file (type png)
  <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 225.
+Package pdftex.def Info: uzh.png used on input line 226.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
  [8 <./res_temp.png>]
 Kapitel 4.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 226.
 <temp_heat.png, id=135, 433.62pt x 289.08pt>
 File: temp_heat.png Graphic file (type png)
  <use temp_heat.png>
-Package pdftex.def Info: temp_heat.png used on input line 250.
+Package pdftex.def Info: temp_heat.png used on input line 251.
 (pdftex.def)             Requested size: 188.21288pt x 125.4753pt.
 
 <temp_cool.png, id=136, 433.62pt x 289.08pt>
 File: temp_cool.png Graphic file (type png)
  <use temp_cool.png>
-Package pdftex.def Info: temp_cool.png used on input line 251.
+Package pdftex.def Info: temp_cool.png used on input line 252.
 (pdftex.def)             Requested size: 188.21288pt x 125.4753pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--253
+Underfull \hbox (badness 10000) in paragraph at lines 247--254
 
  []
 
 
-Overfull \hbox (48.9342pt too wide) in paragraph at lines 255--258
+Overfull \hbox (48.9342pt too wide) in paragraph at lines 256--259
 \T1/phv/m/n/10.95 Erstere Mes-sung führt so-dann nach For-mel []4.3[] zu ei-ner
  Band-lücke von $\OML/cmm/m/it/10.95 E[]$ \T1/phv/m/n/10.95 = (1.0089$\OMS/cmsy
 /m/n/10.95 ^^F$\T1/phv/m/n/10.95 0.0012)eV
@@ -1364,100 +1360,81 @@ Overfull \hbox (48.9342pt too wide) in paragraph at lines 255--258
 
 File: uzh.png Graphic file (type png)
 <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 258.
+Package pdftex.def Info: uzh.png used on input line 259.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 258.
+(babel)             in language  on input line 259.
  [9
 
  <./temp_heat.png> <./temp_cool.png>]
 File: uzh.png Graphic file (type png)
  <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 260.
+Package pdftex.def Info: uzh.png used on input line 261.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 261.
  [10]
 Kapitel 5.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 262.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 262.
 <spannungstabelle.png, id=155, 1080.035pt x 706.64pt>
 File: spannungstabelle.png Graphic file (type png)
 
 <use spannungstabelle.png>
-Package pdftex.def Info: spannungstabelle.png used on input line 265.
+Package pdftex.def Info: spannungstabelle.png used on input line 266.
 (pdftex.def)             Requested size: 418.25368pt x 273.64764pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
 File: uzh.png Graphic file (type png)
  <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 281.
+Package pdftex.def Info: uzh.png used on input line 282.
 (pdftex.def)             Requested size: 74.27055pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 282.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 282.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 282.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 281.
+(babel)             in language  on input line 282.
  [11
 
  <./spannungstabelle.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
 
 (./halbleiter.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
 Package rerunfilecheck Info: File `halbleiter.out' has not changed.
 (rerunfilecheck)             Checksum: 58B3C686B230F34D94963D64E2AD23BE;680.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'halbleiter.run.xml'.
 \openout1 = `halbleiter.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15107 strings out of 493089
- 237579 string characters out of 6134842
- 529858 words of memory out of 5000000
- 18316 multiletter control sequences out of 15000+600000
+ 15098 strings out of 493089
+ 237450 string characters out of 6134842
+ 529761 words of memory out of 5000000
+ 18308 multiletter control sequences out of 15000+600000
  27994 words of font info for 41 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
-<<<<<<< HEAD
- 44i,15n,66p,8823b,1760s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/urw/helvetic/uhvr8a.pfb>
-Output written on halbleiter.pdf (11 pages, 698331 bytes).
-=======
  43i,15n,50p,1155b,1631s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
@@ -1471,8 +1448,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on halbleiter.pdf (11 pages, 676510 bytes).
->>>>>>> a46d9f916ec11476c5fec378e33ebb3b3ddf80d1
+Output written on halbleiter.pdf (11 pages, 676056 bytes).
 PDF statistics:
  211 PDF objects out of 1000 (max. 8388607)
  173 compressed objects within 2 object streams
