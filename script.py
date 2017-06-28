@@ -29,7 +29,7 @@ k_B = 1.38064852*10**(-23)
 
 
 #Daten auslesen
-#data = np.loadtxt(fname='Full R data.txt', skiprows=7)
+data = np.loadtxt(fname='Full R data.txt', skiprows=7)
 
 V_0 = data[:,0] #V
 R = data[:,1] #Ohm
@@ -154,16 +154,16 @@ plt.savefig('temp_time.png',dpi=250)
 """
 
 #Plot R/T
-"""
+
 plt.figure()
-plt.plot(T_korr_heat,R_heat/1000,label='Aufwaermprozess')
-plt.plot(T_korr_cool,R_cool/1000,label='Abkuehlprozess')
+plt.plot(T_korr_heat,R_heat/1000,label='Aufwärmprozess')
+plt.plot(T_korr_cool,R_cool/1000,label='Abkühlprozess')
 plt.xlabel('$T$ [K]')
 plt.ylabel('$R$ [$k\Omega$]')
 plt.legend(loc=1)
 plt.xlim(300,450)
 plt.savefig('res_temp.png',dpi=250)
-"""
+
 
 
 '''
