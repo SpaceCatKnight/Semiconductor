@@ -132,11 +132,17 @@
 
 \tableofcontents
 
-\chapter{Physikalischer Hintergrund}
+\chapter{Einleitung}
+
+\section{Zielsetzung}
+
+Das Ziel des Experimentes ist es, den elektrischen Widerstand einer Siliziumprobe bei verschiedenen Temperaturen zu messen. Aus den Messergebnissen soll dann die Energiebandlücke bestimmt werden.
+
+\section{Physikalischer Hintergrund}
 \label{ch:Physik}
 
 Für das Experiment wird der Widerstand einer Siliziumprobe bei verschiedenen Temperaturen gemessen. Bei reinem Silizium handelt es sich um einen intrinsischen Halbleiter. Somit besteht die Ladungsträgerdichte zu gleichen Teilen aus einem Elektronenanteil $n$ und einem Lochanteil $p$.
-Die elektrische Leitfähigkeit eines Halbleiters ist gegeben durch die Formel\footnoteremember{kittel}{Introduction to solid state physics / Charles Kittel.—8th ed.}
+Die elektrische Leitfähigkeit eines Halbleiters ist gegeben durch die Formel\footnoteremember{kittel}{Introduction to solid state physics / Charles Kittel. 8th ed.}
 \begin{equation}
 \label{eq:sigma}
 \sigma = ne\mu_e + pe\mu_h ,
@@ -180,8 +186,8 @@ R = A(T) T^{-3/2} \exp \left(\frac{E_g}{2 k_B T}\right)
 \end{equation}
 mit $A(T)$ als leicht temperaturabhängigem Proportionalitätsfaktor. 
 
-\chapter{Experimenteller Aufbau}
-Die Silizium-Probe ist auf einem isolierenden Probeträger aus Keramikmaterial angebracht. An diesem zylinderförmigen Träger sind die Kontakte für die Vierpunktmessung des Widerstandes angebracht, sowie ein Thermoelement, welches die Temperatur der Probe messen soll. Der Träger wird von der Heizung umschlossen. Im Innenraum der Heizung herrscht ein Vakuum um die Wärmekonvektion und Oxidation zu unterbinden. Dieser Unterdruck von $10^-5$ mBar wird mit einer Turbomolekularpumpe erzeugt. An der Heizung ist ein zweites Thermoelement für den Temperaturregler angebracht. Dieser Regler steuert die Heizleistung, seine Funktionsweise wird in Kapitel \ref{PID_Regler}  genauer beschrieben. Die Messdaten und die Daten des Reglers können mit einem LabVIEW Programm überprüft und gespeichert werden.
+\section{Experimenteller Aufbau}
+Die Silizium-Probe ist auf einem isolierenden Probeträger aus Keramikmaterial angebracht. An diesem zylinderförmigen Träger sind die Kontakte für die Vierpunktmessung des Widerstandes angebracht, sowie ein Thermoelement, welches die Temperatur der Probe messen soll. Der Träger wird von der Heizung umschlossen. Im Innenraum der Heizung herrscht ein Vakuum um die Wärmekonvektion und Oxidation zu unterbinden. Dieser Unterdruck von $10^-5$ mBar wird mit einer Turbomolekularpumpe erzeugt. An der Heizung ist ein zweites Thermoelement für den Temperaturregler angebracht. Dieser Regler steuert die Heizleistung, seine Funktionsweise wird in Abschnitt \ref{PID_Regler}  genauer beschrieben. Die Messdaten und die Daten des Reglers können mit einem LabVIEW Programm überprüft und gespeichert werden.
 
 BILD
 %\begin{figure}[htbp]
@@ -192,7 +198,7 @@ BILD
 %\end{figure}
 
 
-\section{PID-Regler}
+\subsection{PID-Regler}
 \label{PID_Regler}
 Der Temperaturregler ist ein PID-Regler (Proportional Integral Differential Regler). Dieser Regler basiert auf Rückkopplung. Es wird ein IST-Wert, in unserem Fall die aktuelle Temperatur der Heizspirale und ein SOLL-Wert, die gewünschte Temperatur, verglichen. Der PID-Regler steuert den Heizstrom als Funktion der Differenz zwischen IST- und SOLL-Wert. Er wird eingesetzt um potentielle Störungen zu glätten und eine stabile Temperaturregelung zu erhalten. Die drei Teile des PID-Reglers haben verschiedene Funktionen.
 
@@ -202,12 +208,12 @@ Der Differential-Teil extrapoliert den Temperaturverlauf und reagiert als Funkti
 In unserem Versuch bleibt der Differential-Teil darum ausgeschaltet. 
 
 
-\section{Thermoelement}
+\subsection{Thermoelement}
 Ein Thermoelement besteht aus einem Stromkreis mit zwei verschiedenen Metallen A und B. Wenn zwischen den Kontaktstellen eine Temperaturdifferenz existiert, entsteht gemäss dem Seebeck-Effekt eine elektrische Spannung 
 $$ U = \int_{T_{1}}^{T_{2}} S_{B}(T) - S_{A}(T) \, dT $$
 wobei die Seebeck-Koeffizienten $S_{A}$ und $S_{B}$ temperaturabhängige Materialeigenschaften mit der Einheit V$/$K sind. Mithilfe einer Spannungstabelle (siehe Anhang auf Seite \pageref{Kacktabelle}) kann der gemessenen Spannung eine Temperatur zugeordnet werden. In diesem Experiment wurde ein NiCr-Ni-Thermoelement verwendet.
 
-\section{Vierpunkt-Widerstandsmessung}
+\subsection{Vierpunkt-Widerstandsmessung}
 Um den Widerstand der Probe möglichst genau zu messen, wird die Vierpunkt-Methode verwendet. Dabei erfolgt die Stromzufuhr und die Spannungsmessung über seperate Leitungen. Die Spannung wird hochohmig direkt ab der Probe abgegriffen. So kann der Widerstand im Gegensatz zur Zweipunkt-Methode ohne Verfälschungen der Messung durch die Widerstände der Kabel und Kontakte gemessen werden.
 
 \newpage
@@ -224,6 +230,8 @@ Während des Versuchs wurde die Temperatur in der Heizspule und an der Probe gem
 \label{temp_time}
 \end{figure}
 %
+
+\clearpage
 
 \section{Temperaturabhängigkeit des elektrischen Widerstands}
 Die Siliziumprobe wurde zuerst auf $500^{\circ}$C erwärmt und dann wieder auf Raumtemperatur abgekühlt. Während des ganzen Prozesses wurde der elektrische Widerstand mithilfe der Vierpunkt-Messmethode ermittelt. In der Abbildung \ref{res_temp} ist ersichtlich, dass der Widerstandsverlauf bei Aufwärm- (blau) und Abkühlprozess (grün) leicht unterschiedlich ausfällt.
@@ -294,6 +302,7 @@ Hier gilt es zu beachten, dass die angegebenen Unsicherheiten auf der Bandlücke
 \clearpage
 
 \chapter{Diskussion}
+\label{ch:Diskussion}
 
 Da der Abkühlprozess sich über längere Zeit hinzog, ist anzunehmen, dass die Temperaturverteilung der Probe näher an einem thermodynamischen Gleichgewicht ist als im Falle des Aufwärmens. Die dadurch entstandene Abweichung in der Temperaturabhängigkeit des Widerstandes wird in Abbildung
 \ref{res_temp} deutlich. Daraus lässt sich schliessen, dass die Messung während des Abkühlens die Präzisere von beiden ist. Die aus dieser Messung resultierende Bandlücke ist \begin{center}
