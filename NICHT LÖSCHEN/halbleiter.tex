@@ -260,7 +260,7 @@ Der Logarithmus der Gleichung \ref{eq:Rexp} ist dann:
 \ln(R) = \ln (B) + \frac{E_g}{2 k_B} T^{-1}
 \end{equation}
 
-Aufgrund der linearen Abhängigkeit von $T^{-1}$ ist es sinnvoll, die Messwerte in einem Plot mit $T^{-1}$ in der x-Achse und ln$(R)$ in der y-Achse darzustellen. Der dadurch entstandene Graph ist grösstenteils näherungsweise linear. Bei kleinen Temperaturen bzeziehungsweise grossem $T^{-1}$ scheitert die Näherung, die in Formel \ref{eq:Rexp} gemacht wurde. Die Steigung $a$ eines linearen Fits durch den näherungsweise linearen Bereich hängt aufgrund von Gleichung \ref{eq:Rlog} direkt mit der Bandlücke zusammen:
+Aufgrund der linearen Abhängigkeit von $T^{-1}$ ist es sinnvoll, die Messwerte in einem Plot mit $T^{-1}$ in der x-Achse und ln$(R)$ in der y-Achse darzustellen. Der dadurch entstandene Graph ist grösstenteils näherungsweise linear. Bei kleinen Temperaturen beziehungsweise grossem $T^{-1}$ scheitert die Näherung, die in Formel \ref{eq:Rexp} gemacht wurde. Die Steigung $a$ eines linearen Fits durch den näherungsweise linearen Bereich hängt aufgrund von Gleichung \ref{eq:Rlog} direkt mit der Bandlücke zusammen:
 \begin{equation}
 \label{eq:bandgap}
 a = \frac{E_g}{2 k_B} \quad \Rightarrow \quad E_g = 2 k_B a
@@ -274,8 +274,8 @@ Für beide Teile der Messung, Aufwärm- (Abbildung \ref{temp_heat}) und Abkühlp
 \begin{tabular}{lll}
 					& Aufwärmen 					& Abkühlen\\
 	\hline
-	Steigung 			& $a = (5854\pm7)$K			& $a = (6061\pm1)$K\\
-	y-Achsenabschnitt	& $b = -4.716\pm0.012$			& $b = -5.130\pm0.003$\\
+	Steigung 			& $a_1 = (5854\pm7)$K			& $a_2 = (6061\pm1)$K\\
+	y-Achsenabschnitt	& $b_1 = -4.716\pm0.012$			& $b_2 = -5.130\pm0.003$\\
 	Bandlücke			& $E_{g} = (1.0089\pm0.0012)$eV	& $E_{g} = (1.0446\pm0.0002)$eV\\
 	
 %
@@ -309,7 +309,7 @@ Da der Abkühlprozess sich über längere Zeit hinzog, ist anzunehmen, dass die 
 $E_g$ = 1.04 eV.
 \end{center} Dieser weicht um 6.3\% vom Literaturwert\footnote{Streetman, Ben G.; Sanjay Banerjee (2000). Solid State electronic Devices. 5th ed.} $E_g$ = 1.11 eV (bei 302 K) ab und ist auch erwartungsgemäss näher an jenem als der beim Aufwärmprozess errechnete Wert von $E_g$ = 1.01 eV. \\
 \\
-Fehlerquellen, die für die Abweichung vom Literaturwert verantwortlich sind, wären einerseits die Vernachlässigung der weiteren temperaturabhängigen Beiträge in Formel \ref{eq:Endloesung}, andererseits auch die Annahme, dass es sich bei der verwendeten Siliziumprobe um einen rein intrinsischen Halbleiter handelt. Zusätzlich zu möglichen Verunreinigungen bei der Herstellung des Präparats wurde diese durch unzählige Pratikumsversuche wahrscheinlich leicht beschädigt, schliesslich können Oxidationsprozesse auch beim angelegten Vakuum nicht vollständig ausgeschlossen werden. Auch beim langsamen Abkühlen ist die Temperaturverteilung der Siliziumprobe nie ganz konstant, was die Widerstandsmessung zusätzlich verfälscht. Aufgrund der variierenden Temperaturverteilung und der Tatsache, dass die Messung der Probentemperatur aussen am Probenträger durchgeführt wurde, ist auch bei der Temperaturmessung eine Messunsicherheit zu erwarten. Zu dieser kommt auch hinzu, dass beim Errechnen der Temperaturwerte aus der elektrischen Spannung am Thermoelement auf Seite \pageref{Kacktabelle} die Raumtemperatur mangels Thermometer abgeschätzt wurde. Letztlich ist die Grösse der Bandlücke selbst nicht gänzlich unabhängig von der Temperatur und ist folglich anhand der Beobachtung der Temperaturabhängigkeit des elektrischen Widerstandes nur mit begrenzter Genauigkeit messbar. \\
+Fehlerquellen, die für die Abweichung vom Literaturwert verantwortlich sind, sind einerseits die Vernachlässigung der weiteren temperaturabhängigen Beiträge in Formel \ref{eq:Endloesung}, andererseits auch die Annahme, dass es sich bei der verwendeten Siliziumprobe um einen rein intrinsischen Halbleiter handelt. Zusätzlich zu möglichen Verunreinigungen bei der Herstellung des Präparats wurde diese durch unzählige Pratikumsversuche wahrscheinlich leicht beschädigt, schliesslich können Oxidationsprozesse auch beim angelegten Vakuum nicht vollständig ausgeschlossen werden. Auch beim langsamen Abkühlen ist die Temperaturverteilung der Siliziumprobe nie ganz konstant, was die Widerstandsmessung zusätzlich verfälscht. Aufgrund der variierenden Temperaturverteilung und der Tatsache, dass die Messung der Probentemperatur am Probenträger durchgeführt wurde, ist auch bei der Temperaturmessung eine Messunsicherheit zu erwarten. Zu dieser kommt auch hinzu, dass beim Errechnen der Temperaturwerte aus der elektrischen Spannung am Thermoelement auf Seite \pageref{Kacktabelle} die Raumtemperatur mangels Thermometer abgeschätzt wurde. Letztlich ist die Grösse der Bandlücke selbst nicht gänzlich unabhängig von der Temperatur und ist folglich anhand der Beobachtung der Temperaturabhängigkeit des elektrischen Widerstandes nur mit begrenzter Genauigkeit messbar. \\
 \\
 Um diese Fehler zu minimieren, könnte das Experiment an einem neu hergestellten, monokristallinen Siliziumpräparat durchgeführt werden. Die Temperaturverteilung der Probe wäre zudem umso näher an einem thermodynamischen Gleichgewicht, wenn die Ofentemperatur während des Abkühlens sehr langsam und kontinuierlich nach unten geregelt werden würde. Ein Thermometer im Praktikumsraum würde ebenfalls zur Fehlerreduktion beitragen. Um die Bandlücke noch genauer zu messen, könnte man anstatt der Widerstandsmessung die optische Absorption bei verschiedenen Temperaturwerten messen. Diese Messmethode hätte den Vorteil, die Temperaturabhängigkeit der Bandlücke korrekt wiedergeben zu können.
 
@@ -323,7 +323,6 @@ Um diese Fehler zu minimieren, könnte das Experiment an einem neu hergestellten
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\textwidth]{spannungstabelle.png}
-\label{temp_cool}
 \end{figure}
 %
 Aus der Tabelle \ref{Kacktabelle} ist ersichtlich, dass der Zusammenhang zwischen Temperatur $T$ und der Thermospannung $V$ linear ist. Es gilt
