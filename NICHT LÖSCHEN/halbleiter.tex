@@ -302,12 +302,22 @@ Hier gilt es zu beachten, dass die angegebenen Unsicherheiten auf der Bandlücke
 \label{temp_cool}
 \end{figure}
 %
-Als Bezugspunkt wird in dieser Tabelle die Vergleichsstellentemperatur $T_{0}=0^{\circ}C$ verwendet. Für die Messung bei Raumtemperatur $T_{R} \approx 26^{\circ}C$ muss dies entsprechend kompensiert werden:
-$$ U_{th} = U_{1} \, (1-\frac{T_{0}}{T_{R}}) $$
-
-
+Aus der Tabelle \ref{Kacktabelle} ist ersichtlich, dass der Zusammenhang zwischen Temperatur $T$ und der Thermospannung $V$ linear ist. Es gilt
+\begin{equation}
+T = c_1 V + c_2
+\end{equation}
+wobei beim NiCr-Cr Thermoelement
+\begin{align*}
+c_1 &= 24.3\\
+c_2 &= 1.06
+\end{align*}
+ 
+ Diese Funktion gilt für die Vergleichsstellentemperatur $T_0 = 0^{\circ}$ C. Für abweichende Umgebungstemperatur $T_1$, in unserem Fall $26^{\circ}$ C, muss die Spannung entsprechend angepasst werden.
  
  
+ \begin{equation}
+ T = c_1 (V+ \frac{T_1-c_2}{c_1}+c_2= c_1 V + T_1
+ \end{equation}
  
  
 
