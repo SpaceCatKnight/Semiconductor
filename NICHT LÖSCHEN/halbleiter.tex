@@ -147,7 +147,7 @@ Die elektrische Leitfähigkeit eines Halbleiters ist gegeben durch die Formel\fo
 \label{eq:sigma}
 \sigma = ne\mu_e + pe\mu_h ,
 \end{equation}
-wobei $\mu_e$ und $\mu_h$ jeweils die Mobilität der Elektronen- bzw. Loch-Beiträge ist. Diese ist leicht temperaturabhängig. Die Elektronenladungsdichte $n$ errechnet sich aus der Formel\footnoterecall{kittel}
+wobei $\mu_e$ und $\mu_h$ jeweils die Mobilitäten der Elektronen- bzw. Loch-Beiträge sind. Diese ist leicht temperaturabhängig. Die Elektronenladungsdichte $n$ errechnet sich aus der Formel\footnoterecall{kittel}
 \begin{equation}
 n = \int_{E_c}^{\infty} D_e(E) f_e(E) dE 
 \end{equation}
@@ -171,15 +171,15 @@ p = 2 \left(\frac{m_h k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp \left(\frac{E_v - 
 \begin{equation}
 np = 4 \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{3} (m_e m_h)^{3/2} \exp \left(\frac{-E_g}{k_B T}\right)
 \end{equation}
-Dabei ist $E_g = E_c - E_v$ die Energiebandlücke. Da die beiden Ladungsdichten im intrinsischen Fall gleich gross sind, lassen sie sich durch Folgende Formel in Abhängigkeit der Bandlücke und der Temperatur beschreiben:
+Dabei ist $E_g = E_c - E_v$ die Energiebandlücke. Da die beiden Ladungsdichten im intrinsischen Fall gleich gross sind, lassen sie sich durch folgende Formel in Abhängigkeit der Bandlücke und der Temperatur beschreiben:
 \begin{equation}
 n = p = 2 \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{3/2} (m_e m_h)^{3/4} \exp \left(\frac{-E_g}{2 k_B T}\right)
 \end{equation}
-Der spezifische Widerstand ist somit nach einsetzen in Formel \ref{eq:sigma}
+Der spezifische Widerstand ist somit nach einsetzen in Formel \ref{eq:sigma}:
 \begin{equation}
 \rho = \frac{1}{\sigma} = \frac{1}{2 (\mu_e + \mu_h)e} \left(\frac{k_B T}{2 \pi \hbar^2}\right)^{-3/2} (m_e m_h)^{-3/4} \exp \left(\frac{E_g}{2 k_B T}\right)
 \end{equation}
-Da der elektrische Widerstand mit einem geometrischen Faktor direkt proportional zum spezifischen Widerstand ist, wird dieser somit
+Da der elektrische Widerstand mit einem geometrischen Faktor direkt proportional zum spezifischen Widerstand ist, wird dieser zu
 \begin{equation}
 \label{eq:Endloesung}
 R = A(T) T^{-3/2} \exp \left(\frac{E_g}{2 k_B T}\right)
@@ -187,7 +187,7 @@ R = A(T) T^{-3/2} \exp \left(\frac{E_g}{2 k_B T}\right)
 mit $A(T)$ als leicht temperaturabhängigem Proportionalitätsfaktor. 
 
 \section{Experimenteller Aufbau}
-Die Silizium-Probe ist auf einem isolierenden Probeträger aus Keramikmaterial angebracht. An diesem zylinderförmigen Träger sind die Kontakte für die Vierpunktmessung des Widerstandes angebracht, sowie ein Thermoelement, welches die Temperatur der Probe messen soll. Der Träger wird von der Heizung umschlossen. Im Innenraum der Heizung herrscht ein Vakuum um die Wärmekonvektion und Oxidation zu unterbinden. Dieser Unterdruck von $10^-5$ mBar wird mit einer Turbomolekularpumpe erzeugt. An der Heizung ist ein zweites Thermoelement für den Temperaturregler angebracht. Dieser Regler steuert die Heizleistung, seine Funktionsweise wird in Abschnitt \ref{PID_Regler}  genauer beschrieben. Die Messdaten und die Daten des Reglers können mit einem LabVIEW Programm überprüft und gespeichert werden.
+Die Silizium-Probe ist auf einem isolierenden Probenträger aus Keramikmaterial angebracht. An diesem zylinderförmigen Träger sind die Kontakte für die Vierpunktmessung des Widerstandes angebracht, sowie ein Thermoelement, welches die Temperatur der Probe messen soll. Der Träger wird von der Heizung umschlossen. Im Innenraum der Heizung herrscht ein Vakuum, um die Wärmekonvektion und Oxidation zu unterbinden. Dieser Unterdruck von $10^{-5}$ mbar wird mit einer Turbomolekularpumpe erzeugt. An der Heizung ist ein zweites Thermoelement für den Temperaturregler angebracht. Dieser Regler steuert die Heizleistung. Seine Funktionsweise wird in Abschnitt \ref{PID_Regler}  genauer beschrieben. Die Messdaten und die Daten des Reglers können mit einem LabVIEW Programm überprüft und gespeichert werden.
 
 BILD
 %\begin{figure}[htbp]
@@ -202,10 +202,9 @@ BILD
 \label{PID_Regler}
 Der Temperaturregler ist ein PID-Regler (Proportional Integral Differential Regler). Dieser Regler basiert auf Rückkopplung. Es wird ein IST-Wert, in unserem Fall die aktuelle Temperatur der Heizspirale und ein SOLL-Wert, die gewünschte Temperatur, verglichen. Der PID-Regler steuert den Heizstrom als Funktion der Differenz zwischen IST- und SOLL-Wert. Er wird eingesetzt um potentielle Störungen zu glätten und eine stabile Temperaturregelung zu erhalten. Die drei Teile des PID-Reglers haben verschiedene Funktionen.
 
-Proportional-Teil reagiert sehr schnell auf Temperaturänderung da er proportional zur Differenz des IST- und SOLL-Wertes ist. Mit einem Proportional-Teil alleine wird die gewünschte Temperatur aber nie erreicht.\\
-Der Integral-Teil reagiert als Funktion der Differenz des Mittelwerts und des SOLL-Wertes. Dieser Teil reguliert also langsamer als der Proportional-Teil. Störungen werden ausgeglichen und der SOLL-Wert wird tatsächlich erreicht.\\
-Der Differential-Teil extrapoliert den Temperaturverlauf und reagiert als Funktion der Differenz zwischen dem extrapolierten IST-Wert und dem SOLL-Wert. Dieser Teil reguliert schneller als der Proportional-Teil und ist somit sehr instabil gegenüber Störungen, eine Übersteuerung ist möglich.
-In unserem Versuch bleibt der Differential-Teil darum ausgeschaltet. 
+Der Proportional-Teil reagiert sehr schnell auf Temperaturänderungen, da der Heizstrom proportional zur Differenz des IST- und SOLL-Wertes ist.\\
+Der Integral-Teil reagiert als Funktion der Differenz des Mittelwerts und des SOLL-Wertes. Er reguliert also langsamer als der Proportional-Teil. Der Integral-Teil sorgt dafür, dass Störungen ausgeglichen werden und er ist nötig, um den SOLL-Wert tatsächlich zu erreichen.\\
+Der Differential-Teil extrapoliert den Temperaturverlauf und reagiert als Funktion der Differenz zwischen dem extrapolierten IST-Wert und dem SOLL-Wert. Dieser Teil reguliert schneller als der Proportional-Teil und ist somit sehr instabil gegenüber Störungen, eine Übersteuerung ist möglich. In unserem Versuch bleibt der Differential-Teil darum ausgeschaltet. 
 
 
 \subsection{Thermoelement}
@@ -247,7 +246,7 @@ Die Siliziumprobe wurde zuerst auf $500^{\circ}$C erwärmt und dann wieder auf R
 
 \chapter{Auswertung}
 
-Formel \ref{eq:Endloesung} in Kapitel \ref{ch:Physik} vereinfacht sich für T hinreichend klein zu:
+Formel \ref{eq:Endloesung} in Kapitel \ref{ch:Physik} vereinfacht sich für T hinreichend klein zu
 \begin{equation}
 \label{eq:Rexp}
 R \approx B \exp \left(\frac{E_g}{2 k_B T}\right)
@@ -288,14 +287,14 @@ Hier gilt es zu beachten, dass die angegebenen Unsicherheiten auf der Bandlücke
 \begin{figure}[h]
 \centering
     	\includegraphics[width=0.8\textwidth]{temp_heat.png}
-	\caption{Aufwärmprozess}
+	\caption{}
 	\label{temp_heat}
 \end{figure}
 
 \begin{figure}[h]
 \centering
     	\includegraphics[width=0.8\textwidth]{temp_cool.png}
-	\caption{Abkühlprozess}
+	\caption{}
 	\label{temp_cool}
 \end{figure}
 
@@ -307,9 +306,9 @@ Hier gilt es zu beachten, dass die angegebenen Unsicherheiten auf der Bandlücke
 Da der Abkühlprozess sich über längere Zeit hinzog, ist anzunehmen, dass die Temperaturverteilung der Probe näher an einem thermodynamischen Gleichgewicht ist als im Falle des Aufwärmens. Die dadurch entstandene Abweichung in der Temperaturabhängigkeit des Widerstandes wird in Abbildung
 \ref{res_temp} deutlich. Daraus lässt sich schliessen, dass die Messung während des Abkühlens die Präzisere von beiden ist. Die aus dieser Messung resultierende Bandlücke ist \begin{center}
 $E_g$ = 1.04 eV.
-\end{center} Dieser weicht um 6.3\% vom Literaturwert\footnote{Streetman, Ben G.; Sanjay Banerjee (2000). Solid State electronic Devices. 5th ed.} $E_g$ = 1.11 eV (bei 302 K) ab und ist auch erwartungsgemäss näher an jenem als der beim Aufwärmprozess errechnete Wert von $E_g$ = 1.01 eV. \\
+\end{center} Dies weicht um 6.3\% vom Literaturwert\footnote{Streetman, Ben G.; Sanjay Banerjee (2000). Solid State electronic Devices. 5th ed.} $E_g = 1.11$eV (bei 302 K) ab, ist also erwartungsgemäss näher an jenem als der beim Aufwärmprozess errechnete Wert ($E_g = 1.01$eV). \\
 \\
-Fehlerquellen, die für die Abweichung vom Literaturwert verantwortlich sind, sind einerseits die Vernachlässigung der weiteren temperaturabhängigen Beiträge in Formel \ref{eq:Endloesung}, andererseits auch die Annahme, dass es sich bei der verwendeten Siliziumprobe um einen rein intrinsischen Halbleiter handelt. Zusätzlich zu möglichen Verunreinigungen bei der Herstellung des Präparats wurde diese durch unzählige Pratikumsversuche wahrscheinlich leicht beschädigt, schliesslich können Oxidationsprozesse auch beim angelegten Vakuum nicht vollständig ausgeschlossen werden. Auch beim langsamen Abkühlen ist die Temperaturverteilung der Siliziumprobe nie ganz konstant, was die Widerstandsmessung zusätzlich verfälscht. Aufgrund der variierenden Temperaturverteilung und der Tatsache, dass die Messung der Probentemperatur am Probenträger durchgeführt wurde, ist auch bei der Temperaturmessung eine Messunsicherheit zu erwarten. Zu dieser kommt auch hinzu, dass beim Errechnen der Temperaturwerte aus der elektrischen Spannung am Thermoelement auf Seite \pageref{Kacktabelle} die Raumtemperatur mangels Thermometer abgeschätzt wurde. Letztlich ist die Grösse der Bandlücke selbst nicht gänzlich unabhängig von der Temperatur und ist folglich anhand der Beobachtung der Temperaturabhängigkeit des elektrischen Widerstandes nur mit begrenzter Genauigkeit messbar. \\
+Fehlerquellen, die für die Abweichung vom Literaturwert verantwortlich sind, sind einerseits die Vernachlässigung der weiteren temperaturabhängigen Beiträge in Formel \ref{eq:Endloesung}, andererseits auch die Annahme, dass es sich bei der verwendeten Siliziumprobe um einen rein intrinsischen Halbleiter handelt. Zusätzlich zu möglichen Verunreinigungen bei der Herstellung des Präparats wurde diese durch unzählige Pratikumsversuche wahrscheinlich leicht beschädigt, schliesslich können Oxidationsprozesse auch beim angelegten Vakuum nicht vollständig ausgeschlossen werden. Auch beim langsamen Abkühlen ist die Temperaturverteilung der Siliziumprobe nie ganz konstant, was die Widerstandsmessung zusätzlich verfälscht. Aufgrund der variierenden Temperaturverteilung und der Tatsache, dass die Messung der Probentemperatur am Probenträger durchgeführt wurde, ist auch bei der Temperaturmessung eine Messunsicherheit zu erwarten. Hinzu kommt, dass beim Errechnen der Temperaturwerte aus der elektrischen Spannung am Thermoelement (siehe \ref{Kacktabelle}) die Raumtemperatur mangels Thermometer abgeschätzt wurde. Letztlich ist die Grösse der Bandlücke selbst nicht gänzlich unabhängig von der Temperatur und ist folglich anhand der Beobachtung der Temperaturabhängigkeit des elektrischen Widerstandes nur mit begrenzter Genauigkeit messbar. \\
 \\
 Um diese Fehler zu minimieren, könnte das Experiment an einem neu hergestellten, monokristallinen Siliziumpräparat durchgeführt werden. Die Temperaturverteilung der Probe wäre zudem umso näher an einem thermodynamischen Gleichgewicht, wenn die Ofentemperatur während des Abkühlens sehr langsam und kontinuierlich nach unten geregelt werden würde. Ein Thermometer im Praktikumsraum würde ebenfalls zur Fehlerreduktion beitragen. Um die Bandlücke noch genauer zu messen, könnte man anstatt der Widerstandsmessung die optische Absorption bei verschiedenen Temperaturwerten messen. Diese Messmethode hätte den Vorteil, die Temperaturabhängigkeit der Bandlücke korrekt wiedergeben zu können.
 
