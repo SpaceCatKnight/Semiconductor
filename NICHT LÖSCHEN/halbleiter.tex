@@ -6,7 +6,7 @@
 \usepackage{blindtext}
 \usepackage{graphicx}
 \usepackage{subfigure}
-\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\sfdefault}
 \usepackage{fancyhdr}
 \usepackage{amsmath}
 \usepackage{mdwlist} %BenÃ¶tigt fÃŒr AbstÃ€nde in AufzÃ€hlungen zu lÃ¶schen
@@ -153,7 +153,7 @@ D_e(E) = \frac{1}{2 \pi^2} \left(\frac{2 m_e}{\hbar^2}\right)^{3/2} (E - E_c)^{1
 \begin{equation}
 f(E,T) = \frac{1}{\exp \left(\frac{\mu - E}{k_B T}\right) + 1}
 \end{equation}
-($\mu$ ist hier das chemische Potential), was sich mit der Näherung $mu - \epsilon >> k_B T$ integrieren lässt zu\footnoterecall{kittel}
+($\mu$ ist hier das chemische Potential), was sich mit der Näherung $\mu - E >> k_B T$ integrieren lässt zu\footnoterecall{kittel}
 \begin{equation}
 n = 2 \left(\frac{m_e k_B T}{2 \pi \hbar^2}\right)^{3/2} \exp \left(\frac{\mu - E_c}{k_B T}\right).
 \end{equation}
@@ -183,6 +183,13 @@ mit $A(T)$ als leicht temperaturabhängigem Proportionalitätsfaktor.
 \chapter{Experimenteller Aufbau}
 Die Silizium-Probe ist auf einem isolierenden Probeträger aus Keramikmaterial angebracht. An diesem zylinderförmigen Träger sind die Kontakte für die Vierpunktmessung des Widerstandes angebracht, sowie ein Thermoelement, welches die Temperatur der Probe messen soll. Der Träger wird von der Heizung umschlossen. Im Innenraum der Heizung herrscht ein Vakuum um die Wärmekonvektion und Oxidation zu unterbinden. Dieser Unterdruck von $10^-5$ mBar wird mit einer Turbomolekularpumpe erzeugt. An der Heizung ist ein zweites Thermoelement für den Temperaturregler angebracht. Dieser Regler steuert die Heizleistung, seine Funktionsweise wird in Kapitel \ref{PID_Regler}  genauer beschrieben. Die Messdaten und die Daten des Reglers können mit einem LabVIEW Programm überprüft und gespeichert werden.
 
+BILD
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.9\textwidth]{}
+%\caption{Aufbaud des Experiments}
+%\label{Aufbau}
+%\end{figure}
 
 
 \section{PID-Regler}
@@ -201,15 +208,14 @@ $$ U = \int_{T_{1}}^{T_{2}} S_{B}(T) - S_{A}(T) \, dT $$
 wobei die Seebeck-Koeffizienten $S_{A}$ und $S_{B}$ temperaturabhängige Materialeigenschaften mit der Einheit V$/$K sind. Mithilfe einer Spannungstabelle (siehe Anhang auf Seite \pageref{Kacktabelle}) kann der gemessenen Spannung eine Temperatur zugeordnet werden. In diesem Experiment wurde ein NiCr-Ni-Thermoelement verwendet.
 
 \section{Vierpunkt-Widerstandsmessung}
-Um den Widerstand der Probe möglichst genau zu messen, wird die Vierpunkt-Methode verwendet. Dabei fliesst über zwei der Leitungen ein bekannter Strom durch den Widerstand. Der Spannungsabfall am Widerstand wird über zwei weitere Leitungen abgegriffen. Der Widerstand kann dann mithilfe des Ohmschen Gesetzes berechnet werden.
-
+Um den Widerstand der Probe möglichst genau zu messen, wird die Vierpunkt-Methode verwendet. Dabei erfolgt die Stromzufuhr und die Spannungsmessung über seperate Leitungen. Die Spannung wird hochohmig direkt ab der Probe abgegriffen. So kann der Widerstand im Gegensatz zur Zweipunkt-Methode ohne Verfälschungen der Messung durch die Widerstände der Kabel und Kontakte gemessen werden.
 
 \newpage
 
 \chapter{Messdaten}
 
 \section{Temperaturverlauf}
-Während des Versuchs wurde die Temperatur in der Heizspule und an der Probe gemessen. In Figur \ref{temp_time} ist ersichtlich, dass die Probentemperatur der Reglertemperatur im Aufwärmprozess hinterherhinkt. Für die Auswertung wird nur die Probentemperatur berücksichtigt.
+Während des Versuchs wurde die Temperatur in der Heizspule und an der Probe gemessen. In Abbildung \ref{temp_time} ist ersichtlich, dass die Probentemperatur der Reglertemperatur im Aufwärmprozess hinterherhinkt. Für die Auswertung wird nur die Probentemperatur berücksichtigt.
 %
 \begin{figure}[htbp]
 \centering
@@ -220,7 +226,7 @@ Während des Versuchs wurde die Temperatur in der Heizspule und an der Probe gem
 %
 
 \section{Temperaturabhängigkeit des elektrischen Widerstands}
-Die Siliziumprobe wurde zuerst auf $500^{\circ}$C erwärmt und dann wieder auf Raumtemperatur abgekühlt. Während des ganzen Prozesses wurde der elektrische Widerstand mit der Vierpunkt-Messmethode ermittelt. In der Skizze (Abbildung \ref{res_temp}) ist ersichtlich, dass der Widerstandsverlauf bei Aufwärm- (blau) und Abkühlprozess (grün) leicht unterschiedlich ausfällt.
+Die Siliziumprobe wurde zuerst auf $500^{\circ}$C erwärmt und dann wieder auf Raumtemperatur abgekühlt. Während des ganzen Prozesses wurde der elektrische Widerstand mithilfe der Vierpunkt-Messmethode ermittelt. In der Abbildung \ref{res_temp} ist ersichtlich, dass der Widerstandsverlauf bei Aufwärm- (blau) und Abkühlprozess (grün) leicht unterschiedlich ausfällt.
 %
 \begin{figure}[htbp]
 \centering
@@ -233,7 +239,7 @@ Die Siliziumprobe wurde zuerst auf $500^{\circ}$C erwärmt und dann wieder auf R
 
 \chapter{Auswertung}
 
-Formel \ref{eq:Endloesung} in Kapitel \ref{ch:Physik} vereinfacht sich im Temperaturbereich des Experiments näherungsweise zu:
+Formel \ref{eq:Endloesung} in Kapitel \ref{ch:Physik} vereinfacht sich für T hinreichend klein zu:
 \begin{equation}
 \label{eq:Rexp}
 R \approx B \exp \left(\frac{E_g}{2 k_B T}\right)
@@ -252,7 +258,7 @@ Aufgrund der linearen Abhängigkeit von $T^{-1}$ ist es sinnvoll, die Messwerte 
 a = \frac{E_g}{2 k_B} \quad \Rightarrow \quad E_g = 2 k_B a
 \end{equation}
 
-Dies wurde einmal für die Messung während des Aufheizens der Probe und einmal für die Messung während des Abkühlens durch:
+Dies wurde einmal für die Messung während des Aufheizens der Probe und einmal für die Messung während des Abkühlens durchgeführt:
 \\
 \begin{figure}[H]
 \centering
