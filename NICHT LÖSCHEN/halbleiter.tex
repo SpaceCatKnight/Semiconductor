@@ -109,18 +109,19 @@
 \fancyhead[C]{\textbf{Halbleiter} } 
 \fancyhead[L]{\includegraphics[height=2\baselineskip]{uzh}}
 
-\fancyfoot{}
+%\fancyfoot{}
 \fancyfoot[R]{\small \thepage}
-\fancyfoot[L]{}
+%\fancyfoot[L]{}
 \fancyfoot[C]{}
-\renewcommand{\footrulewidth}{0.4pt} 
+%\renewcommand{\footrulewidth}{0.4pt} 
+%\renewcommand{\footnoterule}{}
 
 \addtolength{\headheight}{2\baselineskip}
 \addtolength{\headheight}{0.6pt}
 
 
 \renewcommand{\headrulewidth}{0.6pt}
-\renewcommand{\footrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
 \fancypagestyle{plain}{				% plain redefinieren, damit wirklich alle seiten im gleichen stil sind (ausser titlepage)
 \pagestyle{fancy}}
 
@@ -193,7 +194,7 @@ BILD
 %\begin{figure}[htbp]
 %\centering
 %\includegraphics[width=0.9\textwidth]{}
-%\caption{Aufbaud des Experiments}
+%\caption{Aufbau des Experiments}
 %\label{Aufbau}
 %\end{figure}
 
@@ -203,7 +204,7 @@ BILD
 Der Temperaturregler ist ein PID-Regler (Proportional Integral Differential Regler). Dieser Regler basiert auf Rückkopplung. Es wird ein IST-Wert, in unserem Fall die aktuelle Temperatur der Heizspirale und ein SOLL-Wert, die gewünschte Temperatur, verglichen. Der PID-Regler steuert den Heizstrom als Funktion der Differenz zwischen IST- und SOLL-Wert. Er wird eingesetzt um potentielle Störungen zu glätten und eine stabile Temperaturregelung zu erhalten. Die drei Teile des PID-Reglers haben verschiedene Funktionen.
 
 Der Proportional-Teil reagiert sehr schnell auf Temperaturänderungen, da der Heizstrom proportional zur Differenz des IST- und SOLL-Wertes ist.\\
-Der Integral-Teil reagiert als Funktion der Differenz des Mittelwerts und des SOLL-Wertes. Er reguliert also langsamer als der Proportional-Teil. Der Integral-Teil sorgt dafür, dass Störungen ausgeglichen werden und er ist nötig, um den SOLL-Wert tatsächlich zu erreichen.\\
+Der Integral-Teil reagiert als Funktion der Differenz des Mittelwerts und des SOLL-Wertes. Er reguliert also langsamer als der Proportional-Teil. Der Integral-Teil sorgt dafür, dass Störungen ausgeglichen werden und er ist notwendig, um den SOLL-Wert tatsächlich zu erreichen.\\
 Der Differential-Teil extrapoliert den Temperaturverlauf und reagiert als Funktion der Differenz zwischen dem extrapolierten IST-Wert und dem SOLL-Wert. Dieser Teil reguliert schneller als der Proportional-Teil und ist somit sehr instabil gegenüber Störungen, eine Übersteuerung ist möglich. In unserem Versuch bleibt der Differential-Teil darum ausgeschaltet. 
 
 
@@ -213,7 +214,7 @@ $$ U = \int_{T_{1}}^{T_{2}} S_{B}(T) - S_{A}(T) \, dT $$
 wobei die Seebeck-Koeffizienten $S_{A}$ und $S_{B}$ temperaturabhängige Materialeigenschaften mit der Einheit V$/$K sind. Mithilfe einer Spannungstabelle (siehe Anhang auf Seite \pageref{Kacktabelle}) kann der gemessenen Spannung eine Temperatur zugeordnet werden. In diesem Experiment wurde ein NiCr-Ni-Thermoelement verwendet.
 
 \subsection{Vierpunkt-Widerstandsmessung}
-Um den Widerstand der Probe möglichst genau zu messen, wird die Vierpunkt-Methode verwendet. Dabei erfolgt die Stromzufuhr und die Spannungsmessung über seperate Leitungen. Die Spannung wird hochohmig direkt ab der Probe abgegriffen. So kann der Widerstand im Gegensatz zur Zweipunkt-Methode ohne Verfälschungen der Messung durch die Widerstände der Kabel und Kontakte gemessen werden.
+Um den Widerstand der Probe möglichst genau zu messen, wird die Vierpunkt-Methode verwendet. Dabei erfolgt die Stromzufuhr und die Spannungsmessung über seperate Leitungen. Die Spannung wird hochohmig direkt ab der Probe abgegriffen. So kann der Widerstand im Gegensatz zur Zweipunkt-Methode mit einer kleineren Verfälschungen der Messung durch die Widerstände der Kabel und Kontakte gemessen werden.
 
 \newpage
 
@@ -274,7 +275,7 @@ Für beide Teile der Messung, Aufwärm- (Abbildung \ref{temp_heat}) und Abkühlp
 					& Aufwärmen 					& Abkühlen\\
 	\hline
 	Steigung 			& $a_1 = (5854\pm7)$K			& $a_2 = (6061\pm1)$K\\
-	y-Achsenabschnitt	& $b_1 = -4.716\pm0.012$			& $b_2 = -5.130\pm0.003$\\
+%	y-Achsenabschnitt	& $b_1 = -4.716\pm0.012$			& $b_2 = -5.130\pm0.003$\\
 	Bandlücke			& $E_{g} = (1.0089\pm0.0012)$eV	& $E_{g} = (1.0446\pm0.0002)$eV\\
 	
 %
@@ -282,7 +283,7 @@ Für beide Teile der Messung, Aufwärm- (Abbildung \ref{temp_heat}) und Abkühlp
 \end{center}
 %
 
-Hier gilt es zu beachten, dass die angegebenen Unsicherheiten auf der Bandlücke nur dem Fehler auf dem Fit entsprechen. Die effektive Messunsicherheit muss deutlich grösser eingeschätzt werden (siehe Kapitel \ref{ch:Diskussion}).
+Hier gilt es zu beachten, dass die angegebenen Unsicherheiten der Bandlücke nur dem Fehler entsprechen, der vom $\chi^2$-Fit-Algorithmus ausgegeben wurde. Die effektive Messunsicherheit muss deutlich grösser eingeschätzt werden (siehe Kapitel \ref{ch:Diskussion}).
 
 \begin{figure}[h]
 \centering
@@ -324,7 +325,7 @@ Um diese Fehler zu minimieren, könnte das Experiment an einem neu hergestellten
 \includegraphics[width=1\textwidth]{spannungstabelle.png}
 \end{figure}
 %
-Aus der Tabelle \ref{Kacktabelle} ist ersichtlich, dass der Zusammenhang zwischen Temperatur $T$ und der Thermospannung $V$ linear ist. Es gilt
+Aus der obigen Tabelle ist ersichtlich, dass der Zusammenhang zwischen Temperatur $T$ und der Thermospannung $V$ linear ist. Es gilt
 \begin{equation}
 T = c_1 V + c_2
 \end{equation}
@@ -338,7 +339,7 @@ c_2 &= 1.06
  
  
  \begin{equation}
- T = c_1 (V+ \frac{T_1-c_2}{c_1}+c_2= c_1 V + T_1
+ T = c_1 \left(V+ \frac{T_1-c_2}{c_1}\right)+c_2= c_1 V + T_1
  \end{equation}
  
  

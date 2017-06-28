@@ -108,8 +108,8 @@ def linearfit(T,R,Log_R_range,guess,title):
     plt.ylabel(r'$R$ [$\Omega$]')
     plt.title(title)
     plt.legend(loc=2)
-    print('a: ',a,'\n b: ',b)
-    print('Sigma von a und b: ',sigma)
+    print('a: ',a,'\n b: ',np.exp(b))
+    print('Sigma von a : ',sigma[0],'\n Sigma von b: ',np.exp(sigma[1]))
     print('Band gap energy in eV: ',a*2*k_B/eV)
     print('Sigma von E_g: ',sigma[0]*2*k_B/eV)
     
