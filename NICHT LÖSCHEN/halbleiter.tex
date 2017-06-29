@@ -18,6 +18,9 @@
 \usepackage{helvet}
 \usepackage{tabularx}
 \usepackage{titlesec} % TextÃŒberschriften anpassen
+\usepackage[font=small,
+  figurewithin=section,labelsep=space]{caption}
+\setkomafont{sectioning}{\rmfamily}{\bfseries}
 
 % \titleformat{Ãberschriftenklasse}[Absatzformatierung]{Textformatierung} {Nummerierung}{Abstand zwischen Nummerierung und Ãberschriftentext}{Code vor der Ãberschrift}[Code nach der Ãberschrift]
 
@@ -190,13 +193,13 @@ mit $A(T)$ als leicht temperaturabhängigem Proportionalitätsfaktor.
 \section{Experimenteller Aufbau}
 Die Silizium-Probe ist auf einem isolierenden Probenträger aus Keramikmaterial angebracht. An diesem zylinderförmigen Träger sind die Kontakte für die Vierpunktmessung des Widerstandes angebracht, sowie ein Thermoelement, welches die Temperatur der Probe messen soll. Der Träger wird von der Heizung umschlossen. Im Innenraum der Heizung herrscht ein Vakuum, um die Wärmekonvektion und Oxidation zu unterbinden. Dieser Unterdruck von $10^{-5}$ mbar wird mit einer Turbomolekularpumpe erzeugt. An der Heizung ist ein zweites Thermoelement für den Temperaturregler angebracht. Dieser Regler steuert die Heizleistung. Seine Funktionsweise wird in Abschnitt \ref{PID_Regler}  genauer beschrieben. Die Messdaten und die Daten des Reglers können mit einem LabVIEW Programm überprüft und gespeichert werden.
 
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=1\textwidth]{Setup.jpg}
-\caption{Aufbau des Experiments: 1) Ofen und Probe 2) Turbomolekularpumpe 3) PID-Regler 4) Widerstandsmessegerät 5) Spannungsmessgerät der Thermoelemente 6) Stromquelle Heizstrom }
-\label{Aufbau}
-\end{figure}
+BILD
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.9\textwidth]{}
+%\caption{: Aufbau des Experiments}
+%\label{Aufbau}
+%\end{figure}
 
 
 \subsection{PID-Regler}
@@ -210,7 +213,11 @@ Der Differential-Teil extrapoliert den Temperaturverlauf und reagiert als Funkti
 
 \subsection{Thermoelement}
 Ein Thermoelement besteht aus einem Stromkreis mit zwei verschiedenen Metallen A und B. Wenn zwischen den Kontaktstellen eine Temperaturdifferenz existiert, entsteht gemäss dem Seebeck-Effekt eine elektrische Spannung 
-$$ U = \int_{T_{1}}^{T_{2}} S_{B}(T) - S_{A}(T) \, dT $$
+%
+\begin{equation}
+U = \int_{T_{1}}^{T_{2}} S_{B}(T) - S_{A}(T) \, dT
+\end{equation}
+%
 wobei die Seebeck-Koeffizienten $S_{A}$ und $S_{B}$ temperaturabhängige Materialeigenschaften mit der Einheit V$/$K sind. Mithilfe einer Spannungstabelle (siehe Anhang auf Seite \pageref{Kacktabelle}) kann der gemessenen Spannung eine Temperatur zugeordnet werden. In diesem Experiment wurde ein NiCr-Ni-Thermoelement verwendet.
 
 \subsection{Vierpunkt-Widerstandsmessung}
@@ -226,7 +233,7 @@ Während des Versuchs wurde die Temperatur in der Heizspule und an der Probe gem
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{temp_time.png}
-\caption{Temperaturverlauf über die Zeit}
+\caption{: Temperaturverlauf über die Zeit}
 \label{temp_time}
 \end{figure}
 %
@@ -239,7 +246,7 @@ Die Siliziumprobe wurde zuerst auf $500^{\circ}$C erwärmt und dann wieder auf R
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{res_temp.png}
-\caption{elektrischer Widerstand des Halbleiters}
+\caption{: elektrischer Widerstand des Halbleiters}
 \label{res_temp}
 \end{figure}
 %
@@ -304,7 +311,7 @@ Hier gilt es zu beachten, dass die angegebenen Unsicherheiten der Bandlücke nur
 \chapter{Diskussion}
 \label{ch:Diskussion}
 
-Da der Abkühlprozess sich über längere Zeit hinzog, ist anzunehmen, dass die Temperaturverteilung der Probe näher an einem thermodynamischen Gleichgewicht ist als im Falle des Aufwärmens. Die dadurch entstandene Abweichung in der Temperaturabhängigkeit des Widerstandes wird in Abbildung
+Da der Abkühlprozess sich über längere Zeit hinzog, ist anzunehmen, dass die Temperaturverteilung der Probe näher an einem thermodynamischen Gleichgewicht war als im Falle des Aufwärmens. Die dadurch entstandene Abweichung in der Temperaturabhängigkeit des Widerstandes wird in Abbildung
 \ref{res_temp} deutlich. Daraus lässt sich schliessen, dass die Messung während des Abkühlens die Präzisere von beiden ist. Die aus dieser Messung resultierende Bandlücke ist \begin{center}
 $E_g$ = 1.04 eV.
 \end{center} Dies weicht um 6.3\% vom Literaturwert\footnote{Streetman, Ben G.; Sanjay Banerjee (2000). Solid State electronic Devices. 5th ed.} $E_g = 1.11$eV (bei 302 K) ab, ist also erwartungsgemäss näher an jenem als der beim Aufwärmprozess errechnete Wert ($E_g = 1.01$eV). \\
