@@ -325,22 +325,28 @@ Um diese Fehler zu minimieren, könnte das Experiment an einem neu hergestellten
 \includegraphics[width=1\textwidth]{spannungstabelle.png}
 \end{figure}
 %
-Aus der obigen Tabelle ist ersichtlich, dass der Zusammenhang zwischen Temperatur $T$ und der Thermospannung $V$ linear ist. Es gilt
+Aus der obigen Tabelle ist ersichtlich, dass der Zusammenhang zwischen Temperatur $T$ und der Thermospannung $V$ linear ist. Ein linearer Fit der Form
+%
 \begin{equation}
-T = c_1 V + c_2
+T(V) = c_1 V + c_2
 \end{equation}
-wobei beim NiCr-Cr Thermoelement
+führte für das NiCr-Ni Thermoelement zu
 \begin{align*}
 c_1 &= 24.3\\
 c_2 &= 1.06
 \end{align*}
- 
- Diese Funktion gilt für die Vergleichsstellentemperatur $T_0 = 0^{\circ}$ C. Für abweichende Umgebungstemperatur $T_1$, in unserem Fall $26^{\circ}$ C, muss die Spannung entsprechend angepasst werden.
- 
- 
- \begin{equation}
- T = c_1 \left(V+ \frac{T_1-c_2}{c_1}\right)+c_2= c_1 V + T_1
- \end{equation}
+ %
+Es gilt zu beachten, dass die Spannungstabelle für die Umgebungstemperatur $T_0 = 0^{\circ}$C erstellt wurde. 
+Für eine abweichende Umgebungstemperatur $T_1$ (in unserem Fall $26^{\circ}$C) muss die Thermopannung um einen Korrekturterm ergänzt werden:
+%
+\begin{equation}
+V \rightarrow V + \frac{T_1-c_2}{c_1}
+\end{equation}
+%
+Es gilt also:
+\begin{equation}
+T(V) = c_1 \left(V+ \frac{T_1-c_2}{c_1}\right)+c_2= c_1 V + T_1
+\end{equation}
  
  
 
