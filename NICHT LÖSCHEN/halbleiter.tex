@@ -18,6 +18,9 @@
 \usepackage{helvet}
 \usepackage{tabularx}
 \usepackage{titlesec} % TextÃŒberschriften anpassen
+\usepackage[font=small,
+  figurewithin=section,labelsep=space]{caption}
+\setkomafont{sectioning}{\rmfamily}{\bfseries}
 
 % \titleformat{Ãberschriftenklasse}[Absatzformatierung]{Textformatierung} {Nummerierung}{Abstand zwischen Nummerierung und Ãberschriftentext}{Code vor der Ãberschrift}[Code nach der Ãberschrift]
 
@@ -194,7 +197,7 @@ BILD
 %\begin{figure}[htbp]
 %\centering
 %\includegraphics[width=0.9\textwidth]{}
-%\caption{Aufbau des Experiments}
+%\caption{: Aufbau des Experiments}
 %\label{Aufbau}
 %\end{figure}
 
@@ -230,7 +233,7 @@ Während des Versuchs wurde die Temperatur in der Heizspule und an der Probe gem
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{temp_time.png}
-\caption{Temperaturverlauf über die Zeit}
+\caption{: Temperaturverlauf über die Zeit}
 \label{temp_time}
 \end{figure}
 %
@@ -243,7 +246,7 @@ Die Siliziumprobe wurde zuerst auf $500^{\circ}$C erwärmt und dann wieder auf R
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{res_temp.png}
-\caption{elektrischer Widerstand des Halbleiters}
+\caption{: elektrischer Widerstand des Halbleiters}
 \label{res_temp}
 \end{figure}
 %
