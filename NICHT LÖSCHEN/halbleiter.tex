@@ -254,20 +254,19 @@ Die Siliziumprobe wurde zuerst auf $500^{\circ}$C erwärmt und dann wieder auf R
 
 \chapter{Auswertung}
 
-Formel \ref{eq:Endloesung} in Kapitel \ref{ch:Physik} vereinfacht sich für T hinreichend klein zu
+Formel \ref{eq:Endloesung} in Kapitel \ref{ch:Physik} vereinfacht sich näherungsweise zu
 \begin{equation}
 \label{eq:Rexp}
 R \approx B \exp \left(\frac{E_g}{2 k_B T}\right)
 \end{equation}
-mit einer thermostatischen Proportionalitätskonstante $B$, da die Temperaturabhängigkeit der Exponentialfunktion sehr gross gegenüber dem Beitrag von $T^{-3/2}$ und den Mobilitäten $\mu_e$ und $\mu_h$ ist.
+mit einer temperaturunabhängigen Proportionalitätskonstante $B$, da die Temperaturabhängigkeit der Exponentialfunktion aufgrund des grossen Vorfaktors im Exponenten sehr gross gegenüber dem Beitrag von $T^{-3/2}$ und den Mobilitäten $\mu_e$ und $\mu_h$ ist.
 \\
 Der Logarithmus der Gleichung \ref{eq:Rexp} ist dann:
 \begin{equation}
 \label{eq:Rlog}
 \ln(R) = \ln (B) + \frac{E_g}{2 k_B} T^{-1}
-\end{equation}
-
-Aufgrund der linearen Abhängigkeit von $T^{-1}$ ist es sinnvoll, die Messwerte in einem Plot mit $T^{-1}$ in der x-Achse und ln$(R)$ in der y-Achse darzustellen. Der dadurch entstandene Graph ist grösstenteils näherungsweise linear. Bei kleinen Temperaturen beziehungsweise grossem $T^{-1}$ scheitert die Näherung, die in Formel \ref{eq:Rexp} gemacht wurde. Die Steigung $a$ eines linearen Fits durch den näherungsweise linearen Bereich hängt aufgrund von Gleichung \ref{eq:Rlog} direkt mit der Bandlücke zusammen:
+\end{equation}%
+Aufgrund der linearen Abhängigkeit von $T^{-1}$ ist es sinnvoll, die Messwerte in einem Plot mit $T^{-1}$ in der x-Achse und ln$(R)$ in der y-Achse darzustellen. Der dadurch entstandene Graph ist grösstenteils näherungsweise linear. Bei kleinen Temperaturen beziehungsweise grossem $T^{-1}$ scheitert die Näherung, die für Formel \ref{eq:Rexp} getroffen wurde. Verantwortlich dafür sind andere temperaturabhängige Beiträge, die vernachlässigt wurden. Diese entstammen beispielsweise aus der Temperaturabhängigkeit der Mobilität und der Annahme in Formel \ref{eq:intrinsic}, dass es sich um einen rein intrinsischen Halbleiter handle. Die Steigung $a$ eines linearen Fits durch den näherungsweise linearen Bereich hängt aufgrund von Gleichung \ref{eq:Rlog} direkt mit der Bandlücke zusammen:
 \begin{equation}
 \label{eq:bandgap}
 a = \frac{E_g}{2 k_B} \quad \Rightarrow \quad E_g = 2 k_B a
