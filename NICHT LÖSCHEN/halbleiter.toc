@@ -12,9 +12,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Experimenteller Aufbau}{4}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.1}PID-Regler}{4}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.1}PID-Regler}{5}{subsection.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.2}Thermoelement}{5}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.2}Thermoelement}{6}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.3.3}Vierpunkt-Widerstandsmessung}{6}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
